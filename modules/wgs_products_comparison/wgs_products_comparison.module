@@ -1,0 +1,4 @@
+<?php
+include_once('wgs_products_comparison.views_default.inc');
+include_once('wgs_products_comparison.flag_default.inc');
+?>

@@ -1,0 +1,63 @@
+<?php
+	function angular_contact_menu() {
+	  $items ['contact_us'] = array(
+	  'title' => 'AngularJS Contacts',
+	  'page callback' =>  'all_angular_contact_page',
+	  'access arguments' => array('access content'),
+	  );
+	  $items ['result'] = array(
+	  'title' => 'AngularJS Contacts Result',
+	  'page callback' =>  'result_page',
+	  'access arguments' => array('access content'),
+	  );
+	  return $items;
+	};
+	
+	function angular_contact_theme() {
+		return array(
+			'all_angular_contact' => array(
+			'template' => 'all-angular_contact',
+			),
+		);
+	}
+
+	function result_theme() {
+		return array(
+			'result' => array(
+			'template' => 'test',
+			)
+		);
+	}	
+
+	function all_angular_contact_page() {
+		  // Set the path
+		  $path = drupal_get_path('module', 'angular_contact');
+
+		  // Load angular
+		  drupal_add_library('angularjs', 'angularjs');
+
+		  // Load the app
+		  drupal_add_js($path . '/js/controller.js');
+
+		  //drupal_add_css($path . '/css/bootstrap.css');
+
+		  // Return the HTML template
+		  return theme('all_angular_contact');
+	}
+
+	function result_page() {
+		  // Set the path
+		  $path = drupal_get_path('module', 'angular_contact');
+
+		  // Load angular
+		  drupal_add_library('angularjs', 'angularjs');
+
+		  // Load the app
+		  drupal_add_js($path . '/js/controller.js');
+
+		  //drupal_add_css($path . '/css/bootstrap.css');
+
+		  // Return the HTML template
+		  return theme('result');
+	}
+?>

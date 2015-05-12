@@ -1,0 +1,3 @@
+<?php
+include_once('wgs_random_posts.views_default.inc');
+?>

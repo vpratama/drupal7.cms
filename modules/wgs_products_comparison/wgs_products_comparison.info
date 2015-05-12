@@ -1,0 +1,7 @@
+name = WGS Products Comparison
+description = Compare your products
+
+core = 7.x
+
+dependencies[] = flag
+dependencies[] = views

@@ -1,0 +1,34 @@
+<?php
+	function food_menu() {
+	  $items ['food'] = array(
+	  'title' => 'Our Food and Drinks Menu',
+	  'page callback' =>  'all_food_page',
+	  'access arguments' => array('access content'),
+	  );
+	  return $items;
+	};
+	
+	function food_theme() {
+		return array(
+			'all_food' => array(
+			'template' => 'all-food',
+			),
+		);
+	}	
+
+	function all_food_page() {
+		  // Set the path
+		  $path = drupal_get_path('module', 'food');
+
+		  // Load angular
+		  drupal_add_library('angularjs', 'angularjs');
+
+		  // Load the app
+		  drupal_add_js($path . '/js/controller.js');
+
+		  //drupal_add_css($path . '/css/bootstrap.css');
+
+		  // Return the HTML template
+		  return theme('all_food');
+	}
+?>

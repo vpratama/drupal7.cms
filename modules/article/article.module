@@ -1,0 +1,34 @@
+<?php
+	function article_menu() {
+	  $items ['articles'] = array(
+	  'title' => 'Lattest News',
+	  'page callback' =>  'all_article_page',
+	  'access arguments' => array('access content'),
+	  );
+	  return $items;
+	};
+	
+	function article_theme() {
+		return array(
+			'all_article' => array(
+			'template' => 'all-article',
+			),
+		);
+	}	
+
+	function all_article_page() {
+		  // Set the path
+		  $path = drupal_get_path('module', 'article');
+
+		  // Load angular
+		  drupal_add_library('angularjs', 'angularjs');
+
+		  // Load the app
+		  drupal_add_js($path . '/js/controller.js');
+
+		  //drupal_add_css($path . '/css/bootstrap.css');
+
+		  // Return the HTML template
+		  return theme('all_article');
+	}
+?>

@@ -1,0 +1,6 @@
+name = WGS Random Posts
+description = Display Random blog post on the front page
+
+core = 7.x
+
+dependencies[] = views
