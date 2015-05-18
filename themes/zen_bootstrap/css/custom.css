@@ -1,0 +1,20 @@
+body .admin-menu {
+  color: #101010 !important;
+  background-color: #101010 !important;
+}
+
+#admin-menu {
+  margin-top: 50px !important;
+  box-shadow: 0 0px 0px 0px #000 !important;
+  position: fixed !important;
+}
+
+#toolbar {
+  box-shadow: 0 0px 0px 0px #000 !important;
+  position: relative !important;
+  top: -10 !important;
+}
+
+#nav {
+	padding-bottom: 0 !important;
+}

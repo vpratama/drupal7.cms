@@ -6,27 +6,27 @@ app.controller('formCtrl', function($scope, $http) {
     };
     $scope.reset();
     $scope.processForm = function() {
-    	debugger;
-				$http({
+    			$http({
 			        method  : 'POST',
-			        url     : 'result',
+			        url     : 'http://localhost/angular/process.php',
 			        data    : $.param($scope.user),  // pass in data as string
 			        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
 			    })
 			        .success(function(data) {
 			            console.log(data);
-			            /*
 			            if (!data.success) {
 			            	// if not successful, bind errors to error variables
-			                $scope.errorName = data.errors.name;
-			                $scope.errorSuperhero = data.errors.superheroAlias;
+			                //$scope.errorName = data.errors.name;
+			                //$scope.errorSuperhero = data.errors.superheroAlias;
+			                document.write("Gagal : " + data);
 			            } else {
 			            	// if successful, bind success message to message
-			                $scope.message = data.message;
-                                        $scope.errorName = '';
-			                $scope.errorSuperhero = '';
+			                //$scope.message = data.message;
+                            //$scope.errorName = '';
+			                //$scope.errorSuperhero = '';
+			                document.write("Sukses");
 			            }
-			            */
+			            
 			        });
 			};
 });
