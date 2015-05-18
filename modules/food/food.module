@@ -1,7 +1,7 @@
 <?php
 	function food_menu() {
 	  $items ['food'] = array(
-	  'title' => 'Our Food and Drinks Menu',
+	  'title' => 'AngularJS Our Food and Drinks Menu',
 	  'page callback' =>  'all_food_page',
 	  'access arguments' => array('access content'),
 	  );

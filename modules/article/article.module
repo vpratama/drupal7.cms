@@ -1,7 +1,7 @@
 <?php
 	function article_menu() {
 	  $items ['articles'] = array(
-	  'title' => 'Lattest News',
+	  'title' => 'AngularJS Lattest News',
 	  'page callback' =>  'all_article_page',
 	  'access arguments' => array('access content'),
 	  );
