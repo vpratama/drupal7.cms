@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><?php print $site_name; print "&nbsp;<font size='1'>".$site_slogan."</font>" ?></a>
+              <a class="navbar-brand" href="index.html"><?php print $site_name; ?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-left">
               <?php if ($page['navigation'] || $main_menu): ?>
@@ -77,8 +77,8 @@
       <div class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container">
           <p class="muted credit">
-            <div style="float: left;"><font color="white">Copyright &copy;<?php echo date('Y'); ?> &nbsp; <?php print ($site_name) ? $site_name : ''; ?> &nbsp;</font> </div>
-            <div style="float: right;"><font color="white">&copy; Vitradisa Pratama</font> </div>
+            <div style="float: left;"><font color="white">Copyright &copy;<?php echo date('Y'); ?> &nbsp; <?php print ($site_name) ? $site_name : ''; ?> &nbsp;</font></div>
+            <div style="float: right;"><font color="white"><?php print $site_slogan ?></font></div>
           </p>
         </div>
        </div>

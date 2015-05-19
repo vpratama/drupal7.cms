@@ -131,3 +131,95 @@ function zen_bootstrap_preprocess_block(&$variables, $hook) {
 }
 // */
 
+function zen_bootstrap_preprocess_page(&$variables){
+  $search_box = drupal_render(drupal_get_form('search_form'));
+  $variables['search_box'] = $search_box;
+}
+
+function zen_bootstrap_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+ 
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output = '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-body">';
+ 
+    $output .= "<div class=\"_messages $type\">\n";
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= $messages[0];
+    }
+    $output .= "</div>\n";
+ 
+    $output .= '</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->';
+  }
+  return $output;
+}
+
+/*
+function zen_bootstrap_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  
+  if ($element['#below']) {
+
+    // Prevent dropdown functions from being added to management menu as to not affect navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+
+    else {
+      // Add our own wrapper
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '';
+      $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+
+      // Check if this element is nested within another
+      if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
+        // Generate as dropdown submenu
+        $element['#attributes']['class'][] = 'dropdown-submenu';
+      }
+      else {
+        // Generate as standard dropdown
+        $element['#attributes']['class'][] = 'dropdown';
+        $element['#localized_options']['html'] = TRUE;
+        $element['#title'] .= ' ';
+      }
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading with submenu click
+      $element['#localized_options']['attributes']['data-target'] = '#';
+    }
+  }
+ // Issue #1896674 - On primary navigation menu, class 'active' is not set on active menu item.
+ // @see http://drupal.org/node/1896674
+ if (($element['#href'] == $_GET['q'] || ($element['#href'] == '' && drupal_is_front_page())) && (empty($element['#localized_options']['language']) || $element['#localized_options']['language']->language == $language_url->language)) {
+   $element['#attributes']['class'][] = 'active';
+ }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '
+' . $output . $sub_menu . "
+\n";
+}*/
