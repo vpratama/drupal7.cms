@@ -12,7 +12,8 @@
               </button>
               <a class="navbar-brand" href="index.html"><?php print $site_name; ?></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-left">
+            <div id="navbar" class="navbar-collapse collapse ">
+            <div id="navbar" class="navbar-left">
               <?php if ($page['navigation'] || $main_menu): ?>
                 <?php print theme('links__system_main_menu', array(
                   'links' => $main_menu,
@@ -23,7 +24,7 @@
                 )); ?>
               <?php endif; ?>
             </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-right">
+            <div id="navbar" class="navbar-right">
               <?php if ($secondary_menu): ?>
               <?php
                print theme('links__system_secondary_menu', array(
@@ -32,9 +33,10 @@
                     'class' => array('nav', 'navbar-nav', 'navbar-right'),
                   ),
                 ));
-          ?>
-        <?php endif; ?>
+                ?>
+              <?php endif; ?>
             </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -87,4 +89,4 @@
           </p>
         </div>
        </div>
-    </footer> <!-- #footer -->
+    </footer>

@@ -131,6 +131,20 @@ function zen_bootstrap_preprocess_block(&$variables, $hook) {
 }
 // */
 
+function zen_bootstrap_theme() {
+  $items = array();
+  // create custom user-login.tpl.php
+  $items['user_login'] = array(
+  'render element' => 'form',
+  'path' => drupal_get_path('theme', 'your_themename') . '/templates',
+  'template' => 'user-login',
+  'preprocess functions' => array(
+  'your_themename_preprocess_user_login'
+  ),
+ );
+return $items;
+}
+
 function zen_bootstrap_preprocess_page(&$variables){
   $search_box = drupal_render(drupal_get_form('search_form'));
   $variables['search_box'] = $search_box;
