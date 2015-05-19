@@ -24,11 +24,16 @@
               <?php endif; ?>
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right">
-              <?php if ($search_block) : ?>
-                <div id="nav-search-bar">
-                <?php print $search_block; ?>
-                </div>
-              <?php endif;?>
+              <?php if ($secondary_menu): ?>
+              <?php
+               print theme('links__system_secondary_menu', array(
+                  'links' => $secondary_menu,
+                  'attributes' => array(
+                    'class' => array('nav', 'navbar-nav', 'navbar-right'),
+                  ),
+                ));
+          ?>
+        <?php endif; ?>
             </div>
         </nav>
       </div>
