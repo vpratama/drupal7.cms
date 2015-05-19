@@ -1,7 +1,6 @@
 <?php if ($site_name || $site_slogan): ?>
 <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
@@ -25,13 +24,13 @@
               <?php endif; ?>
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right">
-              <ul>
-                <li><?php print $search_box; ?></li>
-              <ul>
+              <?php if ($search_block) : ?>
+                <div id="nav-search-bar">
+                <?php print $search_block; ?>
+                </div>
+              <?php endif;?>
             </div>
-          </div>
         </nav>
-
       </div>
     </div>
 <?php endif; ?>
@@ -52,7 +51,7 @@
       </div>
       <div class="col-sm-8">
           <?php print render($page['highlighted']); ?>
-          <?php print $breadcrumb; ?>
+          <ol class="breadcrumb"><?php print $breadcrumb; ?><ol>
           <a id="main-content"></a>
           <?php print render($title_prefix); ?>
           <?php if ($title): ?>
@@ -71,8 +70,16 @@
           <?php print $feed_icons; ?>
       </div>
     </div>
+    <br />
+    <br />
+    <br />
     <footer id="footer">
-        <p>
-            Copyright &copy; 2011 <a href="<?php print $front_page; ?>"><?php print ($site_name) ? $site_name : ''; ?></a>
-        </p>
+      <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+          <p class="muted credit">
+            <div style="float: left;"><font color="white">Copyright &copy;<?php echo date('Y'); ?> &nbsp; <?php print ($site_name) ? $site_name : ''; ?> &nbsp;</font> </div>
+            <div style="float: right;"><font color="white">&copy; Vitradisa Pratama</font> </div>
+          </p>
+        </div>
+       </div>
     </footer> <!-- #footer -->

@@ -1,14 +1,17 @@
 <?php
-/**
- * @file
- * Returns HTML for a sidebar region.
- *
- * Complete documentation for this file is available online.
- * @see https://drupal.org/node/1728118
- */
+ static $acc_class;
+  if (!isset($acc_class)) {
+    $acc_menu = theme_get_setting('zenstrap_menu_accordion');
+    if (!empty($acc_menu)) {
+      $acc_menu = array_filter($acc_menu);
+    }
+    $acc_class = (empty($acc_menu)? '' : 'accordion');
+  }
+ $classes .= " $acc_class";
 ?>
+
 <?php if ($content): ?>
-  <section class="<?php print $classes; ?>">
+  <section id="<?php print $region;?>" class="<?php print $classes; ?>">
     <?php print $content; ?>
-  </section>
+  </section><!-- region__sidebar -->
 <?php endif; ?>
