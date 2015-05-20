@@ -1,7 +1,7 @@
 <?php
 
 function angular_contact_menu() {
-  //$items = array();
+  $items = array();
   $items['contact_us'] = array(
     'title' => 'AngularJS Contacts masih dalam tahap percobaan',
     'page callback' => 'drupal_get_form',
