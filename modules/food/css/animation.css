@@ -25,11 +25,11 @@
 }
 
 .custom-show-hide {
-  -webkit-transition:all linear 3s;
-  -moz-transition:all linear 3s;
-  -mz-transition:all linear 3s;
-  -o-transition:all linear 3s;
-  transition:all linear 3s;
+  -webkit-transition:all linear 1s;
+  -moz-transition:all linear 1s;
+  -mz-transition:all linear 1s;
+  -o-transition:all linear 1s;
+  transition:all linear 1s;
 }
 
 .custom-show-hide .ng-hide {

@@ -1,12 +1,13 @@
 <div id="content" role="main">
 	<div ng-app="myApp" ng-controller="customersCtrl">
+		<!--
 		<div class="input-append">
           <input type="text" ng-model="search" style="width: 300px">
           <button type="submit" class="btn">Filter</button>
         </div>
-
-		<a ng-click="toggle()">Click to Hide / Show using AngularJS ng-Hide</a>
-		<div class="custom-show-hide" ng-hide="hideShow"> 
+		-->
+		<a ng-click="hidden()">Click to Hide / Show using AngularJS ng-Hide</a>
+		<div ng-init="hideShow = false" class="custom-show-hide" ng-hide="hideShow"> 
 			<div ng-repeat="nodes in result"> 
 			  <div ng-animate="'animate'" ng-repeat="node in nodes | filter:search">
 			    <h2 class="node__title node-title">{{ node.title }}</h2>

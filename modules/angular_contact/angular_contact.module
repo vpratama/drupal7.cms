@@ -1,4 +1,129 @@
 <?php
+
+function angular_contact_menu() {
+  //$items = array();
+  $items['contact_us'] = array(
+    'title' => t('Contacts masih dalam tahap percobaan'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('angular_contact_my_form'),
+    'access arguments' => array('access content'),
+    'description' => t('My form'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+function angular_contact_form() {
+  return drupal_get_form('my_module_my_form');
+}
+function angular_contact_my_form($form_state) {
+  drupal_add_library('angularjs', 'angularjs');
+
+  $options = node_type_get_names();
+
+  $form['node_type'] = array(
+    '#type' => 'ng_select',
+    '#title' => t('Content type'),
+    '#options' => $options,
+    '#description' => t('Filter by content-type.'),
+    '#default_value' => key($options),
+    // Define the ng-model and controller.
+    '#ng_model' => 'nodeType',
+    '#ng_controller' => 'ListCtrl',
+    // Add ng-change.
+    '#attributes' => array(
+      'ng-change' => 'filterNodeType()',
+    ),
+  );
+
+  $form['title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#attributes' => array(
+      'ng-model' => 'query.title',
+      'placeholder' => t('Filter by title'),
+      // HTML5 attribute to Prevent from autocomplete to hide our table.
+      'autocomplete' => 'off',
+    ),
+    '#ng_controller' => 'ListCtrl',
+  );
+
+  $header = array(
+    t('Title'),
+    t('Author'),
+  );
+
+  $row = array(
+    '{{node.title}}',
+    '{{node.author.id}}',
+  );
+
+  $form['table'] = array(
+    '#theme' => 'ng_table',
+    '#header' => $header,
+    '#row' => $row,
+    // Optionally filter query.
+    '#ng_repeat' => 'node in nodes.list | filter: query',
+  );
+  return $form;
+}
+
+
+/*
+function angular_contact_nodes_list_form_builder($form, &$form_state) {
+  $options = node_type_get_names();
+
+  $form['node_type'] = array(
+    '#type' => 'ng_select',
+    '#title' => t('Content type'),
+    '#options' => $options,
+    '#description' => t('Filter by content-type.'),
+    '#default_value' => key($options),
+    // Define the ng-model and controller.
+    '#ng_model' => 'nodeType',
+    '#ng_controller' => 'ListCtrl',
+    // Add ng-change.
+    '#attributes' => array(
+      'ng-change' => 'filterNodeType()',
+    ),
+  );
+
+  $form['title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#attributes' => array(
+      'ng-model' => 'query.title',
+      'placeholder' => t('Filter by title'),
+      // HTML5 attribute to Prevent from autocomplete to hide our table.
+      'autocomplete' => 'off',
+    ),
+    '#ng_controller' => 'ListCtrl',
+  );
+
+  $header = array(
+    t('Title'),
+    t('Author'),
+  );
+
+  $row = array(
+    '{{node.title}}',
+    '{{node.author.id}}',
+  );
+
+  $form['table'] = array(
+    '#theme' => 'ng_table',
+    '#header' => $header,
+    '#row' => $row,
+    // Optionally filter query.
+    '#ng_repeat' => 'node in nodes.list | filter: query',
+  );
+
+  return $form;
+}
+*/
+?>
+
+<?php
+	/*
 	function angular_contact_menu() {
 	  $items ['contact_us'] = array(
 	  'title' => 'AngularJS Contacts',
@@ -60,4 +185,5 @@
 		  // Return the HTML template
 		  return theme('result');
 	}
+	*/
 ?>

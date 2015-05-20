@@ -1,8 +1,7 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', 
   function($scope, $http) {
-  	$scope.hideShow = false;
-    $scope.toggle = function() {
+  	$scope.hidden = function() {
         $scope.hideShow = !$scope.hideShow;
     }
     $http.get("json/foods")
