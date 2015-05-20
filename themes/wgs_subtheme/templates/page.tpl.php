@@ -68,11 +68,9 @@
     </div> <!-- #content -->
     
     <aside id="sidebar" role="complementary">
-        
-        <?php print render($page['sidebar_first']); ?>
+         <?php print render($page['sidebar_first']); ?>
 
-        <?php print render($page['sidebar_second']); ?>
-    
+          <?php print render($page['sidebar_second']); ?>
     </aside> <!-- #sidebar -->
     
 </div> <!-- #main -->

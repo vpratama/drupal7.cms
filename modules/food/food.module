@@ -26,7 +26,7 @@
 		  // Load the app
 		  drupal_add_js($path . '/js/controller.js');
 
-		  //drupal_add_css($path . '/css/bootstrap.css');
+		  drupal_add_css($path . '/css/animation.css');
 
 		  // Return the HTML template
 		  return theme('all_food');

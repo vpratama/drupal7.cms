@@ -1,18 +1,25 @@
 <div id="content" role="main">
-	<div ng-app="myApp" ng-controller="customersCtrl"> 
-		<div ng-repeat="nodes in result"> 
-		  <div ng-repeat="node in nodes">
-			
-		    <h2 class="node__title node-title">{{ node.title }}</h2>
-			<div ng-repeat="image in node">
-			    <img alt="{{ image.alt }}" src="{{ image.src }}" width="200px" />	
+	<div ng-app="myApp" ng-controller="customersCtrl">
+		<div class="input-append">
+          <input type="text" ng-model="search" style="width: 300px">
+          <button type="submit" class="btn">Filter</button>
+        </div>
+
+		<a ng-click="toggle()">Click to Hide / Show using AngularJS ng-Hide</a>
+		<div class="custom-show-hide" ng-hide="hideShow"> 
+			<div ng-repeat="nodes in result"> 
+			  <div ng-animate="'animate'" ng-repeat="node in nodes | filter:search">
+			    <h2 class="node__title node-title">{{ node.title }}</h2>
+				<div ng-repeat="image in node">
+				    <img alt="{{ image.alt }}" src="{{ image.src }}" width="200px" />	
+				</div>
+				<b>Price :</b> {{ node.Price }}
+				<br />
+				<br />
+				<br />
+				<br />
+			  </div>
 			</div>
-			<b>Price :</b> {{ node.Price }}
-			<br />
-			<br />
-			<br />
-			<br />
-		  </div>
 		</div>
 	</div>
 </div>
