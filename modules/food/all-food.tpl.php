@@ -1,7 +1,7 @@
 <div id="content" role="main">
 	<div ng-app="myApp" ng-controller="customersCtrl">
 		<div class="input-append">
-          <input type="text" ng-model="search" autocomplete="false" style="width: 300px">
+          <input type="text" ng-model="search.node.title" autocomplete="false" style="width: 300px">
           <button type="submit" class="btn">Filter</button>
         </div>
 		
@@ -14,9 +14,6 @@
 				    <img alt="{{ image.alt }}" src="{{ image.src }}" width="200px" />	
 				</div>
 				<b>Price :</b> {{ node.Price }}
-				<br />
-				<br />
-				<br />
 				<br />
 			  </div>
 			</div>
