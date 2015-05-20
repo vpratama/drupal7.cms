@@ -8,7 +8,7 @@ app.controller('formCtrl', function($scope, $http) {
     $scope.processForm = function() {
     			$http({
 			        method  : 'POST',
-			        url     : 'http://localhost/angular/process.php',
+			        url     : 'http://drupal7.cms/result',
 			        data    : $.param($scope.user),  // pass in data as string
 			        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
 			    })
