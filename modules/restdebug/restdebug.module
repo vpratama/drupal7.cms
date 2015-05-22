@@ -1,0 +1,93 @@
+<?php
+	function restdebug_block_info() {
+		$blocks['restdebug'] = array('info' => t('Web Service Testing'));
+		return $blocks;
+	}
+
+	function restdebug_block_view($delta = '') {
+		$block['content'] = '<h1>Web Service Testing</h1>';
+		
+		
+		$createnoderesult = restdebug_block_create_node();
+		dpm($createnoderesult);
+		
+		/*	
+		$getnoderesult = restdebug_block_get_node();
+		dpm($getnoderesult);
+		$data = json_decode($getnoderesult->data);
+		dpm($data);
+		*/
+		return $block;
+	}
+
+	function restdebug_block_get_node() {
+		$url = "http://drupal7.cms/service/node/";
+		$parameter = "?parameters[vid]=2";
+		$url .= $parameter;
+		return drupal_http_request($url);
+	}
+	
+	function restdebug_block_create_node() {
+		$url = "http://drupal7.cms/service/node/";
+
+		$node_type = 'article';
+		$node_title = 'Node Created '. date('c');
+		$node_body = 'Node body';
+		$node_format = 'filtered_html';
+		$node_data = '{
+			"type" : "'.$node_type.'",
+			"title" : "'.$node_title.'",
+			"body" : {
+				"und": { 
+		            "0": {  
+		                "value":"'.$node_body.'",
+		                "format": "'.$node_format.'"
+		            }
+		        }
+		    }
+		}';
+
+		$node_options = array(
+			'headers' => array(
+				'Content type' => 'application/x-www-form-urlencoded',
+				'Cookie' => 'admin/admin'
+			),
+			'method' => 'POST',
+			'data' => $node_data
+		);
+
+		return drupal_http_request($url, $node_options);
+	}
+
+	function restdebug_login($username, $password) {
+		if(isset($_COOKIE['drupal_session_name']) && isset($_COOKIE['drupal_session_id'])) {
+			$cookies = ''.$_COOKIE["drupal_session_name"].' = '.$_COOKIE["drupal_session_id"].'';
+			return $cookies;
+		} else {
+			$login_url = "http://drupal7.cms/service/user/login";
+			$user_data = '{
+				"username" : "'.$username.'",
+				"password" : "'.$password.'"
+			}';
+
+			$user_options = array(
+				'headers' => array('Content type' => 'application/json'),
+				'method' => 'POST',
+				'data' => $user_data
+			); 
+		}
+
+		return drupal_http_request($login_url, $user_options);
+
+		if($result->code == 200) {
+			$user_data = json_decode($result->data);
+			setcookie('drupal_session_name', $user_data->session_name);
+			setcookie('drupal_session_id', $user_data->sessid);
+
+			$userSession = ''.$user_data->session_name. ' = ' .$user_data->sessid.'';
+			return $userSession;
+		} else {
+			return FALSE;
+		}
+	}
+	

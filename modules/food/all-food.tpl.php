@@ -4,9 +4,7 @@
 		<div class="input-append">
           Filter : <input type="text" ng-model="search" autocomplete="false" style="width: 300px">
         </div>
-		<a ng-click="hidden()">Click to Hide / Show using AngularJS ng-Hide</a>
-		<div ng-init="hideShow = false" class="custom-show-hide" ng-hide="hideShow"> 
-			<div ng-repeat="nodes in result | filter:search">
+		<div ng-repeat="nodes in result | filter:search">
         <div>    
           {{nodes.node.title}} 
         </div>
@@ -17,7 +15,15 @@
           Price : {{nodes.node.Price}}
         </div>
         <br />
-      </div>
-		</div>
+    </div>
+    <a ng-click="hidden()">Add new Post</a>
+    <div ng-init="hideShow = true" ng-hide="hideShow">
+      <form>
+        Name&nbsp;&nbsp;&nbsp;<input type="text" /><br /><br />
+        Photo&nbsp;&nbsp;&nbsp;<input type="file" /><br /><br />
+        Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" /><br /><br />
+        <input type="submit" />
+      </form>
+    </div>  
 	</div>
 </div>

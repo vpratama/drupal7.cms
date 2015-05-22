@@ -1,0 +1,995 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--global',
+1 verbose cli   'yo',
+1 verbose cli   'bower',
+1 verbose cli   'grunt-cli' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'yo', null ]
+5 verbose cache add name=undefined spec="yo" args=["yo",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'yo',
+6 verbose parsed url   path: 'yo',
+6 verbose parsed url   href: 'yo' }
+7 verbose cache add [ 'bower', null ]
+8 verbose cache add name=undefined spec="bower" args=["bower",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'bower',
+9 verbose parsed url   path: 'bower',
+9 verbose parsed url   href: 'bower' }
+10 verbose cache add [ 'grunt-cli', null ]
+11 verbose cache add name=undefined spec="grunt-cli" args=["grunt-cli",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'grunt-cli',
+12 verbose parsed url   path: 'grunt-cli',
+12 verbose parsed url   href: 'grunt-cli' }
+13 silly lockFile 206e3ce5-bower bower
+14 verbose lock bower /home/vitareinforce/.npm/206e3ce5-bower.lock
+15 silly lockFile 671ef8ac-grunt-cli grunt-cli
+16 verbose lock grunt-cli /home/vitareinforce/.npm/671ef8ac-grunt-cli.lock
+17 silly lockFile c41975d1-yo yo
+18 verbose lock yo /home/vitareinforce/.npm/c41975d1-yo.lock
+19 silly lockFile 206e3ce5-bower bower
+20 silly lockFile 206e3ce5-bower bower
+21 silly lockFile 671ef8ac-grunt-cli grunt-cli
+22 silly lockFile 671ef8ac-grunt-cli grunt-cli
+23 verbose addNamed [ 'bower', '' ]
+24 verbose addNamed [ null, '*' ]
+25 silly lockFile 1240aab1-bower bower@
+26 verbose lock bower@ /home/vitareinforce/.npm/1240aab1-bower.lock
+27 silly lockFile c41975d1-yo yo
+28 silly lockFile c41975d1-yo yo
+29 verbose addNamed [ 'grunt-cli', '' ]
+30 verbose addNamed [ null, '*' ]
+31 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+32 verbose lock grunt-cli@ /home/vitareinforce/.npm/d63f3d0b-grunt-cli.lock
+33 verbose addNamed [ 'yo', '' ]
+34 verbose addNamed [ null, '*' ]
+35 silly lockFile d937c28e-yo yo@
+36 verbose lock yo@ /home/vitareinforce/.npm/d937c28e-yo.lock
+37 silly addNameRange { name: 'bower', range: '*', hasData: false }
+38 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+39 verbose url raw bower
+40 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+41 verbose url resolved https://registry.npmjs.org/bower
+42 info trying registry request attempt 1 at 09:08:39
+43 http GET https://registry.npmjs.org/bower
+44 silly addNameRange { name: 'yo', range: '*', hasData: false }
+45 verbose url raw grunt-cli
+46 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+47 verbose url resolved https://registry.npmjs.org/grunt-cli
+48 info trying registry request attempt 1 at 09:08:39
+49 http GET https://registry.npmjs.org/grunt-cli
+50 verbose url raw yo
+51 verbose url resolving [ 'https://registry.npmjs.org/', './yo' ]
+52 verbose url resolved https://registry.npmjs.org/yo
+53 info trying registry request attempt 1 at 09:08:39
+54 http GET https://registry.npmjs.org/yo
+55 http 200 https://registry.npmjs.org/grunt-cli
+56 silly registry.get cb [ 200,
+56 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+56 silly registry.get     etag: '"4HBUA280DK3DPGUL0L3ZU5BXT"',
+56 silly registry.get     'content-type': 'application/json',
+56 silly registry.get     'cache-control': 'max-age=60',
+56 silly registry.get     'content-length': '20872',
+56 silly registry.get     'accept-ranges': 'bytes',
+56 silly registry.get     date: 'Fri, 22 May 2015 02:08:41 GMT',
+56 silly registry.get     via: '1.1 varnish',
+56 silly registry.get     age: '6',
+56 silly registry.get     connection: 'keep-alive',
+56 silly registry.get     'x-served-by': 'cache-hkg6827-HKG',
+56 silly registry.get     'x-cache': 'HIT',
+56 silly registry.get     'x-cache-hits': '2',
+56 silly registry.get     'x-timer': 'S1432260521.168706,VS0,VE0',
+56 silly registry.get     vary: 'Accept' } ]
+57 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+58 silly addNameRange versions [ 'grunt-cli',
+58 silly addNameRange   [ '0.1.0',
+58 silly addNameRange     '0.1.1',
+58 silly addNameRange     '0.1.2',
+58 silly addNameRange     '0.1.3',
+58 silly addNameRange     '0.1.4',
+58 silly addNameRange     '0.1.5',
+58 silly addNameRange     '0.1.6',
+58 silly addNameRange     '0.1.7',
+58 silly addNameRange     '0.1.8',
+58 silly addNameRange     '0.1.9',
+58 silly addNameRange     '0.1.10',
+58 silly addNameRange     '0.1.11',
+58 silly addNameRange     '0.1.12',
+58 silly addNameRange     '0.1.13' ] ]
+59 verbose addNamed [ 'grunt-cli', '0.1.13' ]
+60 verbose addNamed [ '0.1.13', '0.1.13' ]
+61 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+62 verbose lock grunt-cli@0.1.13 /home/vitareinforce/.npm/28997503-grunt-cli-0-1-13.lock
+63 silly lockFile ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+64 verbose lock https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz /home/vitareinforce/.npm/ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz.lock
+65 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz',
+65 verbose addRemoteTarball   'e9ebc4047631f5012d922770c39378133cad10f4' ]
+66 info retry fetch attempt 1 at 09:08:41
+67 verbose fetch to= /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/tmp.tgz
+68 http GET https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+69 http 200 https://registry.npmjs.org/bower
+70 silly registry.get cb [ 200,
+70 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+70 silly registry.get     etag: '"5O4HUOKW503HIN1GUHXSZ5J7Q"',
+70 silly registry.get     'content-type': 'application/json',
+70 silly registry.get     'cache-control': 'max-age=60',
+70 silly registry.get     'content-length': '112074',
+70 silly registry.get     'accept-ranges': 'bytes',
+70 silly registry.get     date: 'Fri, 22 May 2015 02:08:41 GMT',
+70 silly registry.get     via: '1.1 varnish',
+70 silly registry.get     age: '17',
+70 silly registry.get     connection: 'keep-alive',
+70 silly registry.get     'x-served-by': 'cache-hkg6827-HKG',
+70 silly registry.get     'x-cache': 'HIT',
+70 silly registry.get     'x-cache-hits': '2',
+70 silly registry.get     'x-timer': 'S1432260521.168276,VS0,VE0',
+70 silly registry.get     vary: 'Accept' } ]
+71 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+72 silly addNameRange versions [ 'bower',
+72 silly addNameRange   [ '0.1.0',
+72 silly addNameRange     '0.1.2',
+72 silly addNameRange     '0.1.3',
+72 silly addNameRange     '0.2.0',
+72 silly addNameRange     '0.3.0',
+72 silly addNameRange     '0.3.1',
+72 silly addNameRange     '0.3.2',
+72 silly addNameRange     '0.4.0',
+72 silly addNameRange     '0.5.0',
+72 silly addNameRange     '0.5.1',
+72 silly addNameRange     '0.6.0',
+72 silly addNameRange     '0.6.1',
+72 silly addNameRange     '0.6.2',
+72 silly addNameRange     '0.6.3',
+72 silly addNameRange     '0.6.4',
+72 silly addNameRange     '0.6.5',
+72 silly addNameRange     '0.6.6',
+72 silly addNameRange     '0.6.7',
+72 silly addNameRange     '0.6.8',
+72 silly addNameRange     '0.7.0',
+72 silly addNameRange     '0.7.1',
+72 silly addNameRange     '0.8.0',
+72 silly addNameRange     '0.8.1',
+72 silly addNameRange     '0.8.2',
+72 silly addNameRange     '0.8.3',
+72 silly addNameRange     '0.8.4',
+72 silly addNameRange     '0.8.5',
+72 silly addNameRange     '0.8.6',
+72 silly addNameRange     '0.9.0',
+72 silly addNameRange     '0.9.1',
+72 silly addNameRange     '0.9.2',
+72 silly addNameRange     '0.10.0',
+72 silly addNameRange     '1.0.0',
+72 silly addNameRange     '1.0.1',
+72 silly addNameRange     '1.0.2',
+72 silly addNameRange     '1.0.3',
+72 silly addNameRange     '1.1.0',
+72 silly addNameRange     '1.1.1',
+72 silly addNameRange     '1.1.2',
+72 silly addNameRange     '1.2.0',
+72 silly addNameRange     '1.2.1',
+72 silly addNameRange     '1.2.2',
+72 silly addNameRange     '1.2.3',
+72 silly addNameRange     '1.2.4',
+72 silly addNameRange     '1.2.5',
+72 silly addNameRange     '1.2.6',
+72 silly addNameRange     '1.2.7',
+72 silly addNameRange     '1.2.8',
+72 silly addNameRange     '1.3.0',
+72 silly addNameRange     '1.3.1',
+72 silly addNameRange     '1.3.2',
+72 silly addNameRange     '1.3.3',
+72 silly addNameRange     '1.3.4',
+72 silly addNameRange     '1.3.5',
+72 silly addNameRange     '1.3.6',
+72 silly addNameRange     '1.3.7',
+72 silly addNameRange     '1.3.8',
+72 silly addNameRange     '1.3.9',
+72 silly addNameRange     '1.3.10',
+72 silly addNameRange     '1.3.11',
+72 silly addNameRange     '1.3.12',
+72 silly addNameRange     '1.4.0',
+72 silly addNameRange     '1.4.1' ] ]
+73 verbose addNamed [ 'bower', '1.4.1' ]
+74 verbose addNamed [ '1.4.1', '1.4.1' ]
+75 silly lockFile 185f46c0-bower-1-4-1 bower@1.4.1
+76 verbose lock bower@1.4.1 /home/vitareinforce/.npm/185f46c0-bower-1-4-1.lock
+77 silly lockFile 04dcb06b--npmjs-org-bower-bower-1-4-1-tgz https://registry.npmjs.org/bower/-/bower-1.4.1.tgz
+78 verbose lock https://registry.npmjs.org/bower/-/bower-1.4.1.tgz /home/vitareinforce/.npm/04dcb06b--npmjs-org-bower-bower-1-4-1-tgz.lock
+79 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.4.1.tgz',
+79 verbose addRemoteTarball   'a18be39d030792754f30f1c5b32d37b0156ba8dd' ]
+80 info retry fetch attempt 1 at 09:08:41
+81 verbose fetch to= /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/tmp.tgz
+82 http GET https://registry.npmjs.org/bower/-/bower-1.4.1.tgz
+83 http 200 https://registry.npmjs.org/yo
+84 silly registry.get cb [ 200,
+84 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+84 silly registry.get     etag: '"9ZNI3FG1CP9X7615U6U38L4SX"',
+84 silly registry.get     'content-type': 'application/json',
+84 silly registry.get     'cache-control': 'max-age=60',
+84 silly registry.get     'content-length': '31154',
+84 silly registry.get     'accept-ranges': 'bytes',
+84 silly registry.get     date: 'Fri, 22 May 2015 02:08:41 GMT',
+84 silly registry.get     via: '1.1 varnish',
+84 silly registry.get     age: '0',
+84 silly registry.get     connection: 'keep-alive',
+84 silly registry.get     'x-served-by': 'cache-hkg6827-HKG',
+84 silly registry.get     'x-cache': 'MISS',
+84 silly registry.get     'x-cache-hits': '0',
+84 silly registry.get     'x-timer': 'S1432260521.168492,VS0,VE589',
+84 silly registry.get     vary: 'Accept' } ]
+85 silly addNameRange number 2 { name: 'yo', range: '*', hasData: true }
+86 silly addNameRange versions [ 'yo', [ '1.1.0', '1.1.1', '1.1.2', '1.4.6' ] ]
+87 verbose addNamed [ 'yo', '1.4.6' ]
+88 verbose addNamed [ '1.4.6', '1.4.6' ]
+89 silly lockFile 10fcef76-yo-1-4-6 yo@1.4.6
+90 verbose lock yo@1.4.6 /home/vitareinforce/.npm/10fcef76-yo-1-4-6.lock
+91 silly lockFile 5ba8706e-gistry-npmjs-org-yo-yo-1-4-6-tgz https://registry.npmjs.org/yo/-/yo-1.4.6.tgz
+92 verbose lock https://registry.npmjs.org/yo/-/yo-1.4.6.tgz /home/vitareinforce/.npm/5ba8706e-gistry-npmjs-org-yo-yo-1-4-6-tgz.lock
+93 verbose addRemoteTarball [ 'https://registry.npmjs.org/yo/-/yo-1.4.6.tgz',
+93 verbose addRemoteTarball   '16e03e9af7be4805ef6142cdbb1d15f33504b37b' ]
+94 info retry fetch attempt 1 at 09:08:42
+95 verbose fetch to= /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/tmp.tgz
+96 http GET https://registry.npmjs.org/yo/-/yo-1.4.6.tgz
+97 http 200 https://registry.npmjs.org/bower/-/bower-1.4.1.tgz
+98 http 200 https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+99 verbose tar unpack /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/tmp.tgz
+100 silly lockFile aba64548-21434-0-3760640488471836-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+101 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package /home/vitareinforce/.npm/aba64548-21434-0-3760640488471836-package.lock
+102 silly lockFile cda4aa2d-21434-0-3760640488471836-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/tmp.tgz
+103 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/tmp.tgz /home/vitareinforce/.npm/cda4aa2d-21434-0-3760640488471836-tmp-tgz.lock
+104 silly gunzTarPerm modes [ '755', '644' ]
+105 silly gunzTarPerm extractEntry package.json
+106 silly gunzTarPerm extractEntry .npmignore
+107 silly gunzTarPerm extractEntry README.md
+108 silly gunzTarPerm extractEntry Gruntfile.js
+109 silly gunzTarPerm extractEntry .travis.yml
+110 silly gunzTarPerm extractEntry AUTHORS
+111 silly gunzTarPerm extractEntry LICENSE-MIT
+112 silly gunzTarPerm extractEntry bin/grunt
+113 silly gunzTarPerm extractEntry completion/bash
+114 silly gunzTarPerm extractEntry completion/zsh
+115 silly gunzTarPerm extractEntry lib/cli.js
+116 silly gunzTarPerm extractEntry lib/completion.js
+117 silly gunzTarPerm extractEntry lib/info.js
+118 silly lockFile aba64548-21434-0-3760640488471836-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+119 silly lockFile aba64548-21434-0-3760640488471836-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+120 silly lockFile cda4aa2d-21434-0-3760640488471836-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/tmp.tgz
+121 silly lockFile cda4aa2d-21434-0-3760640488471836-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/tmp.tgz
+122 verbose tar pack [ '/home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz',
+122 verbose tar pack   '/home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package' ]
+123 verbose tarball /home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+124 verbose folder /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+125 silly lockFile aba64548-21434-0-3760640488471836-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+126 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package /home/vitareinforce/.npm/aba64548-21434-0-3760640488471836-package.lock
+127 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+128 verbose lock tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz /home/vitareinforce/.npm/4e978781-npm-grunt-cli-0-1-13-package-tgz.lock
+129 silly lockFile aba64548-21434-0-3760640488471836-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+130 silly lockFile aba64548-21434-0-3760640488471836-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521434-0.3760640488471836/package
+131 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+132 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+133 silly lockFile a2900d98-rce-npm-grunt-cli-0-1-13-package /home/vitareinforce/.npm/grunt-cli/0.1.13/package
+134 verbose lock /home/vitareinforce/.npm/grunt-cli/0.1.13/package /home/vitareinforce/.npm/a2900d98-rce-npm-grunt-cli-0-1-13-package.lock
+135 silly lockFile a2900d98-rce-npm-grunt-cli-0-1-13-package /home/vitareinforce/.npm/grunt-cli/0.1.13/package
+136 silly lockFile a2900d98-rce-npm-grunt-cli-0-1-13-package /home/vitareinforce/.npm/grunt-cli/0.1.13/package
+137 verbose tar unpack /home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+138 silly lockFile 2fcfc32c-rce-npm-grunt-cli-0-1-13-package tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package
+139 verbose lock tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package /home/vitareinforce/.npm/2fcfc32c-rce-npm-grunt-cli-0-1-13-package.lock
+140 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+141 verbose lock tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz /home/vitareinforce/.npm/4e978781-npm-grunt-cli-0-1-13-package-tgz.lock
+142 silly gunzTarPerm modes [ '755', '644' ]
+143 silly gunzTarPerm extractEntry package.json
+144 silly gunzTarPerm extractEntry .npmignore
+145 silly gunzTarPerm extractEntry README.md
+146 silly gunzTarPerm extractEntry Gruntfile.js
+147 silly gunzTarPerm extractEntry .travis.yml
+148 silly gunzTarPerm extractEntry AUTHORS
+149 silly gunzTarPerm extractEntry LICENSE-MIT
+150 silly gunzTarPerm extractEntry bin/grunt
+151 silly gunzTarPerm extractEntry completion/bash
+152 silly gunzTarPerm extractEntry completion/zsh
+153 silly gunzTarPerm extractEntry lib/cli.js
+154 silly gunzTarPerm extractEntry lib/completion.js
+155 silly gunzTarPerm extractEntry lib/info.js
+156 silly lockFile 2fcfc32c-rce-npm-grunt-cli-0-1-13-package tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package
+157 silly lockFile 2fcfc32c-rce-npm-grunt-cli-0-1-13-package tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package
+158 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+159 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+160 verbose chmod /home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz 644
+161 verbose chown /home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz [ 1000, 1000 ]
+162 silly lockFile ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+163 silly lockFile ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+164 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+165 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+166 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+167 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+168 http 200 https://registry.npmjs.org/yo/-/yo-1.4.6.tgz
+169 verbose tar unpack /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/tmp.tgz
+170 silly lockFile 034b9775-21999-0-4870529090985656-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+171 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package /home/vitareinforce/.npm/034b9775-21999-0-4870529090985656-package.lock
+172 silly lockFile bb13a937-21999-0-4870529090985656-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/tmp.tgz
+173 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/tmp.tgz /home/vitareinforce/.npm/bb13a937-21999-0-4870529090985656-tmp-tgz.lock
+174 silly gunzTarPerm modes [ '755', '644' ]
+175 silly gunzTarPerm extractEntry package.json
+176 silly gunzTarPerm extractEntry lib/cli.js
+177 silly gunzTarPerm extractEntry lib/router.js
+178 silly gunzTarPerm extractEntry lib/routes/clear-config.js
+179 silly gunzTarPerm extractEntry lib/routes/exit.js
+180 silly gunzTarPerm extractEntry lib/routes/help.js
+181 silly gunzTarPerm extractEntry lib/routes/home.js
+182 silly gunzTarPerm extractEntry lib/routes/install.js
+183 silly gunzTarPerm extractEntry lib/routes/run.js
+184 silly gunzTarPerm extractEntry lib/routes/update.js
+185 silly gunzTarPerm extractEntry lib/usage.txt
+186 silly gunzTarPerm extractEntry lib/utils/global-config.js
+187 silly gunzTarPerm extractEntry lib/utils/index.js
+188 silly gunzTarPerm extractEntry readme.md
+189 silly lockFile 034b9775-21999-0-4870529090985656-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+190 silly lockFile 034b9775-21999-0-4870529090985656-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+191 silly lockFile bb13a937-21999-0-4870529090985656-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/tmp.tgz
+192 silly lockFile bb13a937-21999-0-4870529090985656-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/tmp.tgz
+193 verbose tar pack [ '/home/vitareinforce/.npm/yo/1.4.6/package.tgz',
+193 verbose tar pack   '/home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package' ]
+194 verbose tarball /home/vitareinforce/.npm/yo/1.4.6/package.tgz
+195 verbose folder /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+196 silly lockFile 034b9775-21999-0-4870529090985656-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+197 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package /home/vitareinforce/.npm/034b9775-21999-0-4870529090985656-package.lock
+198 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+199 verbose lock tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz /home/vitareinforce/.npm/172067e5-inforce-npm-yo-1-4-6-package-tgz.lock
+200 silly lockFile 034b9775-21999-0-4870529090985656-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+201 silly lockFile 034b9775-21999-0-4870529090985656-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521999-0.4870529090985656/package
+202 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+203 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+204 silly lockFile df4d9b7d-tareinforce-npm-yo-1-4-6-package /home/vitareinforce/.npm/yo/1.4.6/package
+205 verbose lock /home/vitareinforce/.npm/yo/1.4.6/package /home/vitareinforce/.npm/df4d9b7d-tareinforce-npm-yo-1-4-6-package.lock
+206 silly lockFile df4d9b7d-tareinforce-npm-yo-1-4-6-package /home/vitareinforce/.npm/yo/1.4.6/package
+207 silly lockFile df4d9b7d-tareinforce-npm-yo-1-4-6-package /home/vitareinforce/.npm/yo/1.4.6/package
+208 verbose tar unpack /home/vitareinforce/.npm/yo/1.4.6/package.tgz
+209 silly lockFile 27106597-tareinforce-npm-yo-1-4-6-package tar:///home/vitareinforce/.npm/yo/1.4.6/package
+210 verbose lock tar:///home/vitareinforce/.npm/yo/1.4.6/package /home/vitareinforce/.npm/27106597-tareinforce-npm-yo-1-4-6-package.lock
+211 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+212 verbose lock tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz /home/vitareinforce/.npm/172067e5-inforce-npm-yo-1-4-6-package-tgz.lock
+213 silly gunzTarPerm modes [ '755', '644' ]
+214 silly gunzTarPerm extractEntry package.json
+215 silly gunzTarPerm extractEntry lib/cli.js
+216 silly gunzTarPerm extractEntry lib/router.js
+217 silly gunzTarPerm extractEntry lib/routes/clear-config.js
+218 silly gunzTarPerm extractEntry lib/routes/exit.js
+219 silly gunzTarPerm extractEntry lib/routes/help.js
+220 silly gunzTarPerm extractEntry lib/routes/home.js
+221 silly gunzTarPerm extractEntry lib/routes/install.js
+222 silly gunzTarPerm extractEntry lib/routes/run.js
+223 silly gunzTarPerm extractEntry lib/routes/update.js
+224 silly gunzTarPerm extractEntry lib/usage.txt
+225 silly gunzTarPerm extractEntry lib/utils/global-config.js
+226 silly gunzTarPerm extractEntry lib/utils/index.js
+227 silly gunzTarPerm extractEntry readme.md
+228 silly lockFile 27106597-tareinforce-npm-yo-1-4-6-package tar:///home/vitareinforce/.npm/yo/1.4.6/package
+229 silly lockFile 27106597-tareinforce-npm-yo-1-4-6-package tar:///home/vitareinforce/.npm/yo/1.4.6/package
+230 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+231 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+232 verbose chmod /home/vitareinforce/.npm/yo/1.4.6/package.tgz 644
+233 verbose chown /home/vitareinforce/.npm/yo/1.4.6/package.tgz [ 1000, 1000 ]
+234 silly lockFile 5ba8706e-gistry-npmjs-org-yo-yo-1-4-6-tgz https://registry.npmjs.org/yo/-/yo-1.4.6.tgz
+235 silly lockFile 5ba8706e-gistry-npmjs-org-yo-yo-1-4-6-tgz https://registry.npmjs.org/yo/-/yo-1.4.6.tgz
+236 silly lockFile 10fcef76-yo-1-4-6 yo@1.4.6
+237 silly lockFile 10fcef76-yo-1-4-6 yo@1.4.6
+238 silly lockFile d937c28e-yo yo@
+239 silly lockFile d937c28e-yo yo@
+240 verbose tar unpack /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/tmp.tgz
+241 silly lockFile 3b8fd18b-1730-0-24181607458740473-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+242 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package /home/vitareinforce/.npm/3b8fd18b-1730-0-24181607458740473-package.lock
+243 silly lockFile d56310af-1730-0-24181607458740473-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/tmp.tgz
+244 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/tmp.tgz /home/vitareinforce/.npm/d56310af-1730-0-24181607458740473-tmp-tgz.lock
+245 silly gunzTarPerm modes [ '755', '644' ]
+246 silly gunzTarPerm extractEntry package.json
+247 silly gunzTarPerm extractEntry .npmignore
+248 silly gunzTarPerm extractEntry README.md
+249 silly gunzTarPerm extractEntry LICENSE
+250 silly gunzTarPerm extractEntry Gruntfile.js
+251 silly gunzTarPerm extractEntry HOOKS.md
+252 silly gunzTarPerm extractEntry CHANGELOG.md
+253 silly gunzTarPerm extractEntry CONTRIBUTING.md
+254 silly gunzTarPerm extractEntry .editorconfig
+255 silly gunzTarPerm extractEntry .jshintrc
+256 silly gunzTarPerm extractEntry appveyor.yml
+257 silly gunzTarPerm extractEntry bin/bower
+258 silly gunzTarPerm extractEntry lib/config.js
+259 silly gunzTarPerm extractEntry lib/index.js
+260 silly gunzTarPerm extractEntry lib/commands/version.js
+261 silly gunzTarPerm extractEntry lib/commands/init.js
+262 silly gunzTarPerm extractEntry lib/commands/install.js
+263 silly gunzTarPerm extractEntry lib/commands/link.js
+264 silly gunzTarPerm extractEntry lib/commands/list.js
+265 silly gunzTarPerm extractEntry lib/commands/info.js
+266 silly gunzTarPerm extractEntry lib/commands/lookup.js
+267 silly gunzTarPerm extractEntry lib/commands/prune.js
+268 silly gunzTarPerm extractEntry lib/commands/register.js
+269 silly gunzTarPerm extractEntry lib/commands/search.js
+270 silly gunzTarPerm extractEntry lib/commands/uninstall.js
+271 silly gunzTarPerm extractEntry lib/commands/index.js
+272 silly gunzTarPerm extractEntry lib/commands/unregister.js
+273 silly gunzTarPerm extractEntry lib/commands/home.js
+274 silly gunzTarPerm extractEntry lib/commands/update.js
+275 silly gunzTarPerm extractEntry lib/commands/help.js
+276 silly gunzTarPerm extractEntry lib/commands/login.js
+277 silly gunzTarPerm extractEntry lib/commands/cache/clean.js
+278 silly gunzTarPerm extractEntry lib/commands/cache/list.js
+279 silly gunzTarPerm extractEntry lib/core/Manager.js
+280 silly gunzTarPerm extractEntry lib/core/PackageRepository.js
+281 silly gunzTarPerm extractEntry lib/core/Project.js
+282 silly gunzTarPerm extractEntry lib/core/ResolveCache.js
+283 silly gunzTarPerm extractEntry lib/core/resolverFactory.js
+284 silly gunzTarPerm extractEntry lib/core/scripts.js
+285 silly gunzTarPerm extractEntry lib/core/resolvers/FsResolver.js
+286 silly gunzTarPerm extractEntry lib/core/resolvers/GitFsResolver.js
+287 silly gunzTarPerm extractEntry lib/core/resolvers/GitHubResolver.js
+288 silly gunzTarPerm extractEntry lib/core/resolvers/GitRemoteResolver.js
+289 silly gunzTarPerm extractEntry lib/core/resolvers/GitResolver.js
+290 silly gunzTarPerm extractEntry lib/core/resolvers/Resolver.js
+291 silly gunzTarPerm extractEntry lib/core/resolvers/SvnResolver.js
+292 silly gunzTarPerm extractEntry lib/core/resolvers/UrlResolver.js
+293 silly gunzTarPerm extractEntry lib/core/resolvers/index.js
+294 silly gunzTarPerm extractEntry lib/renderers/JsonRenderer.js
+295 silly gunzTarPerm extractEntry lib/renderers/StandardRenderer.js
+296 silly gunzTarPerm extractEntry lib/renderers/index.js
+297 silly gunzTarPerm extractEntry lib/util/analytics.js
+298 silly gunzTarPerm extractEntry lib/util/createError.js
+299 silly gunzTarPerm extractEntry lib/util/createLink.js
+300 silly gunzTarPerm extractEntry lib/util/download.js
+301 silly gunzTarPerm extractEntry lib/util/copy.js
+302 silly gunzTarPerm extractEntry lib/util/md5.js
+303 silly gunzTarPerm extractEntry lib/util/readJson.js
+304 silly gunzTarPerm extractEntry lib/util/removeIgnores.js
+305 silly gunzTarPerm extractEntry lib/util/rootCheck.js
+306 silly gunzTarPerm extractEntry lib/util/semver.js
+307 silly gunzTarPerm extractEntry lib/util/cmd.js
+308 silly gunzTarPerm extractEntry lib/util/template.js
+309 silly gunzTarPerm extractEntry lib/util/cli.js
+310 silly gunzTarPerm extractEntry lib/util/validLink.js
+311 silly gunzTarPerm extractEntry lib/util/extract.js
+312 silly gunzTarPerm extractEntry templates/helpers/colors.js
+313 silly gunzTarPerm extractEntry templates/helpers/condense.js
+314 silly gunzTarPerm extractEntry templates/helpers/indent.js
+315 silly gunzTarPerm extractEntry templates/helpers/index.js
+316 silly gunzTarPerm extractEntry templates/helpers/rpad.js
+317 silly gunzTarPerm extractEntry templates/helpers/sum.js
+318 silly gunzTarPerm extractEntry templates/json/help-lookup.json
+319 silly gunzTarPerm extractEntry templates/json/help-cache/clean.json
+320 silly gunzTarPerm extractEntry templates/json/help-cache/list.json
+321 silly gunzTarPerm extractEntry templates/json/help-home.json
+322 silly gunzTarPerm extractEntry templates/json/help-info.json
+323 silly gunzTarPerm extractEntry templates/json/help-init.json
+324 silly gunzTarPerm extractEntry templates/json/help-install.json
+325 silly gunzTarPerm extractEntry templates/json/help-link.json
+326 silly gunzTarPerm extractEntry templates/json/help-list.json
+327 silly gunzTarPerm extractEntry templates/json/help-login.json
+328 silly gunzTarPerm extractEntry templates/json/help-cache.json
+329 silly gunzTarPerm extractEntry templates/json/help-prune.json
+330 silly gunzTarPerm extractEntry templates/json/help-register.json
+331 silly gunzTarPerm extractEntry templates/json/help-search.json
+332 silly gunzTarPerm extractEntry templates/json/help-uninstall.json
+333 silly gunzTarPerm extractEntry templates/json/help-unregister.json
+334 silly gunzTarPerm extractEntry templates/json/help-update.json
+335 silly gunzTarPerm extractEntry templates/json/help-version.json
+336 silly gunzTarPerm extractEntry templates/json/help.json
+337 silly gunzTarPerm extractEntry templates/std/conflict-resolved.std
+338 silly gunzTarPerm extractEntry templates/std/conflict.std
+339 silly gunzTarPerm extractEntry templates/std/help-cache.std
+340 silly gunzTarPerm extractEntry templates/std/help-generic.std
+341 silly gunzTarPerm extractEntry templates/std/help.std
+342 silly gunzTarPerm extractEntry templates/std/info.std
+343 silly gunzTarPerm extractEntry templates/std/lookup.std
+344 silly gunzTarPerm extractEntry templates/std/register.std
+345 silly gunzTarPerm extractEntry templates/std/search-results.std
+346 silly gunzTarPerm extractEntry .travis.yml
+347 silly gunzTarPerm extractEntry test/packages.js
+348 silly gunzTarPerm extractEntry test/helpers.js
+349 silly gunzTarPerm extractEntry test/packages-svn.js
+350 silly gunzTarPerm extractEntry test/test.js
+351 silly gunzTarPerm extractEntry test/core/Manager.js
+352 silly gunzTarPerm extractEntry test/core/packageRepository.js
+353 silly gunzTarPerm extractEntry test/core/resolveCache.js
+354 silly gunzTarPerm extractEntry test/core/resolverFactory.js
+355 silly gunzTarPerm extractEntry test/core/scripts.js
+356 silly gunzTarPerm extractEntry test/core/resolvers/fsResolver.js
+357 silly gunzTarPerm extractEntry test/core/resolvers/gitFsResolver.js
+358 silly gunzTarPerm extractEntry test/core/resolvers/gitHubResolver.js
+359 silly gunzTarPerm extractEntry test/core/resolvers/gitRemoteResolver.js
+360 silly gunzTarPerm extractEntry test/core/resolvers/gitResolver.js
+361 silly gunzTarPerm extractEntry test/core/resolvers/resolver.js
+362 silly gunzTarPerm extractEntry test/core/resolvers/svnResolver.js
+363 silly gunzTarPerm extractEntry test/core/resolvers/urlResolver.js
+364 silly gunzTarPerm extractEntry test/packages-svn.json
+365 silly gunzTarPerm extractEntry test/commands/bower.js
+366 silly gunzTarPerm extractEntry test/commands/info.js
+367 silly gunzTarPerm extractEntry test/commands/init.js
+368 silly gunzTarPerm extractEntry test/commands/install.js
+369 silly gunzTarPerm extractEntry test/commands/link.js
+370 silly gunzTarPerm extractEntry test/commands/index.js
+371 silly gunzTarPerm extractEntry test/commands/login.js
+372 silly gunzTarPerm extractEntry test/commands/lookup.js
+373 silly gunzTarPerm extractEntry test/commands/prune.js
+374 silly gunzTarPerm extractEntry test/commands/register.js
+375 silly gunzTarPerm extractEntry test/commands/search.js
+376 silly gunzTarPerm extractEntry test/commands/home.js
+377 silly gunzTarPerm extractEntry test/commands/uninstall.js
+378 silly gunzTarPerm extractEntry test/commands/help.js
+379 silly gunzTarPerm extractEntry test/commands/unregister.js
+380 silly gunzTarPerm extractEntry test/commands/update.js
+381 silly gunzTarPerm extractEntry test/commands/version.js
+382 silly gunzTarPerm extractEntry test/commands/list.js
+383 silly gunzTarPerm extractEntry test/commands/cache/clean.js
+384 silly gunzTarPerm extractEntry test/commands/cache/list.js
+385 silly gunzTarPerm extractEntry test/packages.json
+386 silly gunzTarPerm extractEntry test/renderers/JsonRenderer.js
+387 silly gunzTarPerm extractEntry test/renderers/StandardRenderer.js
+388 silly gunzTarPerm extractEntry test/assets/package-zip-single-bower-json.zip
+389 silly gunzTarPerm extractEntry test/assets/package-tar.tar.gz
+390 silly gunzTarPerm extractEntry test/assets/package-zip-folder-single-file.zip
+391 silly gunzTarPerm extractEntry test/assets/package-zip-folder.zip
+392 silly gunzTarPerm extractEntry test/assets/package-zip-single-component-json.zip
+393 silly gunzTarPerm extractEntry test/assets/package-zip-single-file.zip
+394 silly gunzTarPerm extractEntry test/assets/package-zip.zip
+395 silly gunzTarPerm extractEntry test/assets/resolve-cache/list-json-1.json
+396 silly gunzTarPerm extractEntry test/assets/test-temp-dir/test-exception.js
+397 silly gunzTarPerm extractEntry test/assets/test-temp-dir/test.js
+398 silly gunzTarPerm extractEntry test/util/analytics.js
+399 silly gunzTarPerm extractEntry test/util/index.js
+400 silly gunzTarPerm extractEntry test/util/removeIgnores.js
+401 silly lockFile 3b8fd18b-1730-0-24181607458740473-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+402 silly lockFile 3b8fd18b-1730-0-24181607458740473-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+403 silly lockFile d56310af-1730-0-24181607458740473-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/tmp.tgz
+404 silly lockFile d56310af-1730-0-24181607458740473-tmp-tgz tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/tmp.tgz
+405 verbose tar pack [ '/home/vitareinforce/.npm/bower/1.4.1/package.tgz',
+405 verbose tar pack   '/home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package' ]
+406 verbose tarball /home/vitareinforce/.npm/bower/1.4.1/package.tgz
+407 verbose folder /home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+408 silly lockFile 3b8fd18b-1730-0-24181607458740473-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+409 verbose lock tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package /home/vitareinforce/.npm/3b8fd18b-1730-0-24181607458740473-package.lock
+410 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+411 verbose lock tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz /home/vitareinforce/.npm/f9a158aa-orce-npm-bower-1-4-1-package-tgz.lock
+412 silly lockFile 3b8fd18b-1730-0-24181607458740473-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+413 silly lockFile 3b8fd18b-1730-0-24181607458740473-package tar:///home/vitareinforce/tmp/npm-4434-VfsVtW_j/1432260521730-0.24181607458740473/package
+414 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+415 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+416 silly lockFile 013539c8-einforce-npm-bower-1-4-1-package /home/vitareinforce/.npm/bower/1.4.1/package
+417 verbose lock /home/vitareinforce/.npm/bower/1.4.1/package /home/vitareinforce/.npm/013539c8-einforce-npm-bower-1-4-1-package.lock
+418 silly lockFile 013539c8-einforce-npm-bower-1-4-1-package /home/vitareinforce/.npm/bower/1.4.1/package
+419 silly lockFile 013539c8-einforce-npm-bower-1-4-1-package /home/vitareinforce/.npm/bower/1.4.1/package
+420 verbose tar unpack /home/vitareinforce/.npm/bower/1.4.1/package.tgz
+421 silly lockFile 15897612-einforce-npm-bower-1-4-1-package tar:///home/vitareinforce/.npm/bower/1.4.1/package
+422 verbose lock tar:///home/vitareinforce/.npm/bower/1.4.1/package /home/vitareinforce/.npm/15897612-einforce-npm-bower-1-4-1-package.lock
+423 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+424 verbose lock tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz /home/vitareinforce/.npm/f9a158aa-orce-npm-bower-1-4-1-package-tgz.lock
+425 silly gunzTarPerm modes [ '755', '644' ]
+426 silly gunzTarPerm extractEntry package.json
+427 silly gunzTarPerm extractEntry .npmignore
+428 silly gunzTarPerm extractEntry README.md
+429 silly gunzTarPerm extractEntry LICENSE
+430 silly gunzTarPerm extractEntry Gruntfile.js
+431 silly gunzTarPerm extractEntry CONTRIBUTING.md
+432 silly gunzTarPerm extractEntry .editorconfig
+433 silly gunzTarPerm extractEntry HOOKS.md
+434 silly gunzTarPerm extractEntry .jshintrc
+435 silly gunzTarPerm extractEntry .travis.yml
+436 silly gunzTarPerm extractEntry appveyor.yml
+437 silly gunzTarPerm extractEntry bin/bower
+438 silly gunzTarPerm extractEntry lib/config.js
+439 silly gunzTarPerm extractEntry lib/index.js
+440 silly gunzTarPerm extractEntry lib/commands/version.js
+441 silly gunzTarPerm extractEntry lib/commands/init.js
+442 silly gunzTarPerm extractEntry lib/commands/install.js
+443 silly gunzTarPerm extractEntry lib/commands/link.js
+444 silly gunzTarPerm extractEntry lib/commands/list.js
+445 silly gunzTarPerm extractEntry lib/commands/info.js
+446 silly gunzTarPerm extractEntry lib/commands/lookup.js
+447 silly gunzTarPerm extractEntry lib/commands/prune.js
+448 silly gunzTarPerm extractEntry lib/commands/register.js
+449 silly gunzTarPerm extractEntry lib/commands/search.js
+450 silly gunzTarPerm extractEntry lib/commands/uninstall.js
+451 silly gunzTarPerm extractEntry lib/commands/index.js
+452 silly gunzTarPerm extractEntry lib/commands/unregister.js
+453 silly gunzTarPerm extractEntry lib/commands/home.js
+454 silly gunzTarPerm extractEntry lib/commands/update.js
+455 silly gunzTarPerm extractEntry lib/commands/help.js
+456 silly gunzTarPerm extractEntry lib/commands/login.js
+457 silly gunzTarPerm extractEntry lib/commands/cache/clean.js
+458 silly gunzTarPerm extractEntry lib/commands/cache/list.js
+459 silly gunzTarPerm extractEntry lib/core/Manager.js
+460 silly gunzTarPerm extractEntry lib/core/PackageRepository.js
+461 silly gunzTarPerm extractEntry lib/core/Project.js
+462 silly gunzTarPerm extractEntry lib/core/ResolveCache.js
+463 silly gunzTarPerm extractEntry lib/core/resolverFactory.js
+464 silly gunzTarPerm extractEntry lib/core/scripts.js
+465 silly gunzTarPerm extractEntry lib/core/resolvers/FsResolver.js
+466 silly gunzTarPerm extractEntry lib/core/resolvers/GitFsResolver.js
+467 silly gunzTarPerm extractEntry lib/core/resolvers/GitHubResolver.js
+468 silly gunzTarPerm extractEntry lib/core/resolvers/GitRemoteResolver.js
+469 silly gunzTarPerm extractEntry lib/core/resolvers/GitResolver.js
+470 silly gunzTarPerm extractEntry lib/core/resolvers/Resolver.js
+471 silly gunzTarPerm extractEntry lib/core/resolvers/SvnResolver.js
+472 silly gunzTarPerm extractEntry lib/core/resolvers/UrlResolver.js
+473 silly gunzTarPerm extractEntry lib/core/resolvers/index.js
+474 silly gunzTarPerm extractEntry lib/renderers/JsonRenderer.js
+475 silly gunzTarPerm extractEntry lib/renderers/StandardRenderer.js
+476 silly gunzTarPerm extractEntry lib/renderers/index.js
+477 silly gunzTarPerm extractEntry lib/util/analytics.js
+478 silly gunzTarPerm extractEntry lib/util/createError.js
+479 silly gunzTarPerm extractEntry lib/util/createLink.js
+480 silly gunzTarPerm extractEntry lib/util/download.js
+481 silly gunzTarPerm extractEntry lib/util/copy.js
+482 silly gunzTarPerm extractEntry lib/util/md5.js
+483 silly gunzTarPerm extractEntry lib/util/readJson.js
+484 silly gunzTarPerm extractEntry lib/util/removeIgnores.js
+485 silly gunzTarPerm extractEntry lib/util/rootCheck.js
+486 silly gunzTarPerm extractEntry lib/util/semver.js
+487 silly gunzTarPerm extractEntry lib/util/cmd.js
+488 silly gunzTarPerm extractEntry lib/util/template.js
+489 silly gunzTarPerm extractEntry lib/util/cli.js
+490 silly gunzTarPerm extractEntry lib/util/validLink.js
+491 silly gunzTarPerm extractEntry lib/util/extract.js
+492 silly gunzTarPerm extractEntry CHANGELOG.md
+493 silly gunzTarPerm extractEntry templates/helpers/colors.js
+494 silly gunzTarPerm extractEntry templates/helpers/condense.js
+495 silly gunzTarPerm extractEntry templates/helpers/indent.js
+496 silly gunzTarPerm extractEntry templates/helpers/index.js
+497 silly gunzTarPerm extractEntry templates/helpers/rpad.js
+498 silly gunzTarPerm extractEntry templates/helpers/sum.js
+499 silly gunzTarPerm extractEntry templates/json/help-lookup.json
+500 silly gunzTarPerm extractEntry templates/json/help-cache/clean.json
+501 silly gunzTarPerm extractEntry templates/json/help-cache/list.json
+502 silly gunzTarPerm extractEntry templates/json/help-home.json
+503 silly gunzTarPerm extractEntry templates/json/help-info.json
+504 silly gunzTarPerm extractEntry templates/json/help-init.json
+505 silly gunzTarPerm extractEntry templates/json/help-install.json
+506 silly gunzTarPerm extractEntry templates/json/help-link.json
+507 silly gunzTarPerm extractEntry templates/json/help-list.json
+508 silly gunzTarPerm extractEntry templates/json/help-login.json
+509 silly gunzTarPerm extractEntry templates/json/help-cache.json
+510 silly gunzTarPerm extractEntry templates/json/help-prune.json
+511 silly gunzTarPerm extractEntry templates/json/help-register.json
+512 silly gunzTarPerm extractEntry templates/json/help-search.json
+513 silly gunzTarPerm extractEntry templates/json/help-uninstall.json
+514 silly gunzTarPerm extractEntry templates/json/help-unregister.json
+515 silly gunzTarPerm extractEntry templates/json/help-update.json
+516 silly gunzTarPerm extractEntry templates/json/help-version.json
+517 silly gunzTarPerm extractEntry templates/json/help.json
+518 silly gunzTarPerm extractEntry templates/std/conflict-resolved.std
+519 silly gunzTarPerm extractEntry templates/std/conflict.std
+520 silly gunzTarPerm extractEntry templates/std/help-cache.std
+521 silly gunzTarPerm extractEntry templates/std/help-generic.std
+522 silly gunzTarPerm extractEntry templates/std/help.std
+523 silly gunzTarPerm extractEntry templates/std/info.std
+524 silly gunzTarPerm extractEntry templates/std/lookup.std
+525 silly gunzTarPerm extractEntry templates/std/register.std
+526 silly gunzTarPerm extractEntry templates/std/search-results.std
+527 silly gunzTarPerm extractEntry test/helpers.js
+528 silly gunzTarPerm extractEntry test/packages-svn.js
+529 silly gunzTarPerm extractEntry test/packages.js
+530 silly gunzTarPerm extractEntry test/test.js
+531 silly gunzTarPerm extractEntry test/packages-svn.json
+532 silly gunzTarPerm extractEntry test/commands/bower.js
+533 silly gunzTarPerm extractEntry test/commands/info.js
+534 silly gunzTarPerm extractEntry test/commands/init.js
+535 silly gunzTarPerm extractEntry test/commands/install.js
+536 silly gunzTarPerm extractEntry test/commands/link.js
+537 silly gunzTarPerm extractEntry test/commands/index.js
+538 silly gunzTarPerm extractEntry test/commands/login.js
+539 silly gunzTarPerm extractEntry test/commands/lookup.js
+540 silly gunzTarPerm extractEntry test/commands/prune.js
+541 silly gunzTarPerm extractEntry test/commands/register.js
+542 silly gunzTarPerm extractEntry test/commands/search.js
+543 silly gunzTarPerm extractEntry test/commands/home.js
+544 silly gunzTarPerm extractEntry test/commands/uninstall.js
+545 silly gunzTarPerm extractEntry test/commands/help.js
+546 silly gunzTarPerm extractEntry test/commands/unregister.js
+547 silly gunzTarPerm extractEntry test/commands/update.js
+548 silly gunzTarPerm extractEntry test/commands/version.js
+549 silly gunzTarPerm extractEntry test/commands/list.js
+550 silly gunzTarPerm extractEntry test/commands/cache/clean.js
+551 silly gunzTarPerm extractEntry test/commands/cache/list.js
+552 silly gunzTarPerm extractEntry test/assets/package-tar.tar.gz
+553 silly gunzTarPerm extractEntry test/assets/package-zip-folder-single-file.zip
+554 silly gunzTarPerm extractEntry test/assets/package-zip-folder.zip
+555 silly gunzTarPerm extractEntry test/assets/package-zip-single-bower-json.zip
+556 silly gunzTarPerm extractEntry test/assets/package-zip-single-component-json.zip
+557 silly gunzTarPerm extractEntry test/assets/package-zip-single-file.zip
+558 silly gunzTarPerm extractEntry test/assets/package-zip.zip
+559 silly gunzTarPerm extractEntry test/assets/resolve-cache/list-json-1.json
+560 silly gunzTarPerm extractEntry test/assets/test-temp-dir/test-exception.js
+561 silly gunzTarPerm extractEntry test/assets/test-temp-dir/test.js
+562 silly gunzTarPerm extractEntry test/packages.json
+563 silly gunzTarPerm extractEntry test/renderers/JsonRenderer.js
+564 silly gunzTarPerm extractEntry test/renderers/StandardRenderer.js
+565 silly gunzTarPerm extractEntry test/core/Manager.js
+566 silly gunzTarPerm extractEntry test/core/packageRepository.js
+567 silly gunzTarPerm extractEntry test/core/resolveCache.js
+568 silly gunzTarPerm extractEntry test/core/resolverFactory.js
+569 silly gunzTarPerm extractEntry test/core/scripts.js
+570 silly gunzTarPerm extractEntry test/core/resolvers/fsResolver.js
+571 silly gunzTarPerm extractEntry test/core/resolvers/gitFsResolver.js
+572 silly gunzTarPerm extractEntry test/core/resolvers/gitHubResolver.js
+573 silly gunzTarPerm extractEntry test/core/resolvers/gitRemoteResolver.js
+574 silly gunzTarPerm extractEntry test/core/resolvers/gitResolver.js
+575 silly gunzTarPerm extractEntry test/core/resolvers/resolver.js
+576 silly gunzTarPerm extractEntry test/core/resolvers/svnResolver.js
+577 silly gunzTarPerm extractEntry test/core/resolvers/urlResolver.js
+578 silly gunzTarPerm extractEntry test/util/analytics.js
+579 silly gunzTarPerm extractEntry test/util/index.js
+580 silly gunzTarPerm extractEntry test/util/removeIgnores.js
+581 silly lockFile 15897612-einforce-npm-bower-1-4-1-package tar:///home/vitareinforce/.npm/bower/1.4.1/package
+582 silly lockFile 15897612-einforce-npm-bower-1-4-1-package tar:///home/vitareinforce/.npm/bower/1.4.1/package
+583 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+584 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+585 verbose chmod /home/vitareinforce/.npm/bower/1.4.1/package.tgz 644
+586 verbose chown /home/vitareinforce/.npm/bower/1.4.1/package.tgz [ 1000, 1000 ]
+587 silly lockFile 04dcb06b--npmjs-org-bower-bower-1-4-1-tgz https://registry.npmjs.org/bower/-/bower-1.4.1.tgz
+588 silly lockFile 04dcb06b--npmjs-org-bower-bower-1-4-1-tgz https://registry.npmjs.org/bower/-/bower-1.4.1.tgz
+589 silly lockFile 185f46c0-bower-1-4-1 bower@1.4.1
+590 silly lockFile 185f46c0-bower-1-4-1 bower@1.4.1
+591 silly lockFile 1240aab1-bower bower@
+592 silly lockFile 1240aab1-bower bower@
+593 silly resolved [ { name: 'grunt-cli',
+593 silly resolved     description: 'The grunt command line interface.',
+593 silly resolved     version: '0.1.13',
+593 silly resolved     author: { name: 'Grunt Team' },
+593 silly resolved     homepage: 'http://gruntjs.com/',
+593 silly resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+593 silly resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+593 silly resolved     licenses: [ [Object] ],
+593 silly resolved     bin: { grunt: 'bin/grunt' },
+593 silly resolved     engines: { node: '>= 0.8.0' },
+593 silly resolved     scripts: { test: 'node bin/grunt test' },
+593 silly resolved     preferGlobal: true,
+593 silly resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+593 silly resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+593 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+593 silly resolved     readme: '# grunt-cli [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-cli.png?branch=master)](http://travis-ci.org/gruntjs/grunt-cli)\n> The Grunt command line interface.\n\nInstall this globally and you\'ll have access to the `grunt` command anywhere on your system.\n\n```shell\nnpm install -g grunt-cli\n```\n\n**Note:** The job of the `grunt` command is to load and run the version of Grunt you have installed locally to your project, irrespective of its version.  Starting with Grunt v0.4, you should never install Grunt itself globally.  For more information about why, [please read this](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation).\n\nSee the [Getting Started](http://gruntjs.com/getting-started) guide for more information.\n\n## Shell tab auto-completion\nTo enable tab auto-completion for Grunt, add one of the following lines to your `~/.bashrc` or `~/.zshrc` file.\n\n```bash\n# Bash, ~/.bashrc\neval "$(grunt --completion=bash)"\n```\n\n```bash\n# Zsh, ~/.zshrc\neval "$(grunt --completion=zsh)"\n```\n\n## Installing grunt-cli locally\nIf you prefer the idiomatic Node.js method to get started with a project (`npm install && npm test`) then install grunt-cli locally with `npm install grunt-cli --save-dev`. Then add a script to your `package.json` to run the associated grunt command: `"scripts": { "test": "grunt test" } `. Now `npm test` will use the locally installed `./node_modules/.bin/grunt` executable to run your Grunt commands.\n\nTo read more about npm scripts, please visit the npm docs: [https://npmjs.org/doc/misc/npm-scripts.html](https://npmjs.org/doc/misc/npm-scripts.html).\n',
+593 silly resolved     readmeFilename: 'README.md',
+593 silly resolved     _id: 'grunt-cli@0.1.13',
+593 silly resolved     dist: { shasum: '1ffcd7a04189110edf9da89ef7f0c12f7c89da98' },
+593 silly resolved     _from: 'grunt-cli@',
+593 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz' },
+593 silly resolved   { name: 'yo',
+593 silly resolved     version: '1.4.6',
+593 silly resolved     description: 'CLI tool for running Yeoman generators',
+593 silly resolved     license: 'BSD',
+593 silly resolved     bin: { yo: 'lib/cli.js' },
+593 silly resolved     author: { name: 'Yeoman team' },
+593 silly resolved     repository: { type: 'git', url: 'git://github.com/yeoman/yo' },
+593 silly resolved     engines: { node: '>=0.10.0', npm: '>=2.1.0' },
+593 silly resolved     scripts:
+593 silly resolved      { test: 'jshint . && mocha test/**/*.js',
+593 silly resolved        postinstall: 'yodoctor',
+593 silly resolved        postupdate: 'yodoctor',
+593 silly resolved        prepublish: 'nsp audit-package' },
+593 silly resolved     files: [ 'lib' ],
+593 silly resolved     keywords:
+593 silly resolved      [ 'cli-app',
+593 silly resolved        'cli',
+593 silly resolved        'bin',
+593 silly resolved        'front-end',
+593 silly resolved        'development',
+593 silly resolved        'dev',
+593 silly resolved        'build',
+593 silly resolved        'web',
+593 silly resolved        'tool',
+593 silly resolved        'scaffold',
+593 silly resolved        'stack',
+593 silly resolved        'yeoman',
+593 silly resolved        'generator',
+593 silly resolved        'generate',
+593 silly resolved        'app',
+593 silly resolved        'boilerplate' ],
+593 silly resolved     dependencies:
+593 silly resolved      { 'array-uniq': '^1.0.2',
+593 silly resolved        async: '^0.9.0',
+593 silly resolved        chalk: '^1.0.0',
+593 silly resolved        configstore: '^0.3.1',
+593 silly resolved        'cross-spawn': '^0.2.3',
+593 silly resolved        figures: '^1.3.5',
+593 silly resolved        findup: '^0.1.5',
+593 silly resolved        fullname: '^1.0.0',
+593 silly resolved        got: '^2.4.0',
+593 silly resolved        'humanize-string': '^1.0.0',
+593 silly resolved        inquirer: '^0.8.0',
+593 silly resolved        insight: '^0.5.0',
+593 silly resolved        lodash: '^3.2.0',
+593 silly resolved        meow: '^3.0.0',
+593 silly resolved        'npm-keyword': '^1.1.1',
+593 silly resolved        opn: '^1.0.0',
+593 silly resolved        'package-json': '^1.1.0',
+593 silly resolved        'root-check': '^1.0.0',
+593 silly resolved        'sort-on': '^1.0.0',
+593 silly resolved        'string-length': '^1.0.0',
+593 silly resolved        titleize: '^1.0.0',
+593 silly resolved        'update-notifier': '^0.3.0',
+593 silly resolved        'user-home': '^1.1.0',
+593 silly resolved        'yeoman-character': '^1.0.0',
+593 silly resolved        'yeoman-doctor': '^1.0.0',
+593 silly resolved        'yeoman-environment': '^1.0.1',
+593 silly resolved        yosay: '^1.0.0' },
+593 silly resolved     devDependencies:
+593 silly resolved      { jshint: '^2.5.11',
+593 silly resolved        mocha: '^2.1.0',
+593 silly resolved        mockery: '^1.4.0',
+593 silly resolved        nock: '^0.59.1',
+593 silly resolved        nsp: '*',
+593 silly resolved        proxyquire: '^1.0.1',
+593 silly resolved        'registry-url': '^3.0.0',
+593 silly resolved        sinon: '^1.12.1' },
+593 silly resolved     preferGlobal: true,
+593 silly resolved     readme: '▂▂╱▔▔▔▔▔▔▔▔▔▔╲  \n╲▂┈╭╮╱╱╭┳━━━╮▕  \n┈┈▏┃╰╮╭╯┃╭━╮┃▕  \n┈┈▏╰╮╰╯╭┫┃╱┃┃▕  \n┈┈▏╱╰╮╭╯┃┃╱┃┃▕  \n┈┈▏╱╱┃┃╱┃╰━╯┃▕  \n┈┈▏╱╱╰╯╱╰━━━╯▕  \n┈┈╲▂▂▂▂▂▂▂▂▂▂╱\n\n\n[![Build Status](https://travis-ci.org/yeoman/yo.svg?branch=master)](https://travis-ci.org/yeoman/yo) ![](http://img.shields.io/badge/unicorn-approved-ff69b4.svg)\n\n> CLI tool for running Yeoman [generators](http://yeoman.io/generators/)\n\n<img src="screenshot.png" width="569">\n\n\n## [Documentation](https://github.com/yeoman/yeoman/wiki)\n\n\n## Options\n\n- `--no-color` flag to disable colors.\n- `--version` Print the current `yo` version.\n- `--help` Print `yo` help menu with the list of found generators\n- `--[no-]insight` to toggle anonymous [Insight](https://github.com/yeoman/insight) tracking which helps us improve Yeoman. Using either of these flags on the first run will prevent you from being prompted about it interactively. The flags can also be used to change it later on.\n- `--generators` will output the available generators\n\n\n## Troubleshooting\n\nRunning `yo doctor` command can help you troubleshoot common issues.\n\nIf `doctor` doesn\'t help, then check opened issues for a similar problem. Open a new issue if your problem haven\'t been reported yet. Make sure to always include the version of `yo` (`yo --version`) and Node.js (`node --version`) you use.\n\nIf your issue only occur using a generator, please report the issues on the generator\'s repository.\n\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md).\n\n\n## Changelog\n\nSee the [release page](https://github.com/yeoman/yo/releases).\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php) and copyright Google.\n',
+593 silly resolved     readmeFilename: 'readme.md',
+593 silly resolved     bugs: { url: 'https://github.com/yeoman/yo/issues' },
+593 silly resolved     _id: 'yo@1.4.6',
+593 silly resolved     dist: { shasum: '60a1fb742f24d47745c7dd15fbc4235c130832f1' },
+593 silly resolved     _from: 'yo@',
+593 silly resolved     _resolved: 'https://registry.npmjs.org/yo/-/yo-1.4.6.tgz' },
+593 silly resolved   { name: 'bower',
+593 silly resolved     version: '1.4.1',
+593 silly resolved     description: 'The browser package manager',
+593 silly resolved     author: { name: 'Twitter' },
+593 silly resolved     licenses: [ [Object] ],
+593 silly resolved     repository: { type: 'git', url: 'git://github.com/bower/bower' },
+593 silly resolved     main: 'lib',
+593 silly resolved     homepage: 'http://bower.io',
+593 silly resolved     engines: { node: '>=0.10.0' },
+593 silly resolved     dependencies:
+593 silly resolved      { abbrev: '^1.0.5',
+593 silly resolved        archy: '1.0.0',
+593 silly resolved        'bower-config': '^0.6.1',
+593 silly resolved        'bower-endpoint-parser': '^0.2.2',
+593 silly resolved        'bower-json': '^0.4.0',
+593 silly resolved        'bower-logger': '^0.2.2',
+593 silly resolved        'bower-registry-client': '^0.3.0',
+593 silly resolved        cardinal: '0.4.4',
+593 silly resolved        chalk: '^1.0.0',
+593 silly resolved        chmodr: '0.1.0',
+593 silly resolved        configstore: '^0.3.2',
+593 silly resolved        'decompress-zip': '^0.1.0',
+593 silly resolved        fstream: '^1.0.3',
+593 silly resolved        'fstream-ignore': '^1.0.2',
+593 silly resolved        github: '^0.2.3',
+593 silly resolved        glob: '^4.3.2',
+593 silly resolved        'graceful-fs': '^3.0.5',
+593 silly resolved        handlebars: '^2.0.0',
+593 silly resolved        inquirer: '0.8.0',
+593 silly resolved        insight: '^0.5.0',
+593 silly resolved        'is-root': '^1.0.0',
+593 silly resolved        junk: '^1.0.0',
+593 silly resolved        lockfile: '^1.0.0',
+593 silly resolved        'lru-cache': '^2.5.0',
+593 silly resolved        mkdirp: '0.5.0',
+593 silly resolved        mout: '^0.11.0',
+593 silly resolved        nopt: '^3.0.1',
+593 silly resolved        opn: '^1.0.1',
+593 silly resolved        'p-throttler': '0.1.1',
+593 silly resolved        promptly: '0.2.0',
+593 silly resolved        q: '^1.1.2',
+593 silly resolved        request: '2.53.0',
+593 silly resolved        'request-progress': '0.3.1',
+593 silly resolved        retry: '0.6.1',
+593 silly resolved        rimraf: '^2.2.8',
+593 silly resolved        semver: '^2.3.0',
+593 silly resolved        'shell-quote': '^1.4.2',
+593 silly resolved        'stringify-object': '^1.0.0',
+593 silly resolved        'tar-fs': '^1.4.1',
+593 silly resolved        tmp: '0.0.24',
+593 silly resolved        'update-notifier': '^0.3.0',
+593 silly resolved        'user-home': '^1.1.0',
+593 silly resolved        which: '^1.0.8' },
+593 silly resolved     devDependencies:
+593 silly resolved      { chai: '^1.10.0',
+593 silly resolved        coveralls: '^2.11.2',
+593 silly resolved        'expect.js': '^0.3.1',
+593 silly resolved        grunt: '^0.4.5',
+593 silly resolved        'grunt-cli': '^0.1.13',
+593 silly resolved        'grunt-contrib-jshint': '^0.10.0',
+593 silly resolved        'grunt-contrib-watch': '^0.6.1',
+593 silly resolved        'grunt-exec': '^0.4.6',
+593 silly resolved        'grunt-simple-mocha': '^0.4.0',
+593 silly resolved        istanbul: '^0.3.5',
+593 silly resolved        'load-grunt-tasks': '^2.0.0',
+593 silly resolved        mocha: '^2.1.0',
+593 silly resolved        multiline: '^1.0.2',
+593 silly resolved        nock: '^0.56.0',
+593 silly resolved        'node-uuid': '^1.4.2',
+593 silly resolved        proxyquire: '^1.3.0',
+593 silly resolved        'spawn-sync': '^1.0.5' },
+593 silly resolved     scripts: { test: 'grunt test' },
+593 silly resolved     bin: { bower: 'bin/bower' },
+593 silly resolved     preferGlobal: true,
+593 silly resolved     readme: '# Bower\n\n[![Build Status](https://travis-ci.org/bower/bower.svg?branch=master)](https://travis-ci.org/bower/bower) [![Windows Build](https://ci.appveyor.com/api/projects/status/jr6vfra8w84plh2g/branch/master?svg=true)](https://ci.appveyor.com/project/sheerun/bower/history) [![Coverage Status](https://img.shields.io/coveralls/bower/bower.svg)](https://coveralls.io/r/bower/bower?branch=master) \n\n<img align="right" height="300" src="http://bower.io/img/bower-logo.png">\n\n> A package manager for the web\n\nBower offers a generic, unopinionated solution to the problem of **front-end package management**, while exposing the package dependency model via an API that can be consumed by a more opinionated build stack. There are no system wide dependencies, no dependencies are shared between different apps, and the dependency tree is flat.\n\nBower runs over Git, and is package-agnostic. A packaged component can be made up of any type of asset, and use any type of transport (e.g., AMD, CommonJS, etc.).\n\n**View complete docs on [bower.io](http://bower.io)**\n\n[View all packages available through Bower\'s registry](http://bower.io/search/).\n\n## Install\n\n```sh\n$ npm install -g bower\n```\n\nBower depends on [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/). Also make sure that [git](http://git-scm.com/) is installed as some bower\npackages require it to be fetched and installed.\n\n\n## Usage\n\nSee complete command line reference at [bower.io/docs/api/](http://bower.io/docs/api/)\n\n### Installing packages and dependencies\n\n```sh\n# install dependencies listed in bower.json\n$ bower install\n\n# install a package and add it to bower.json\n$ bower install <package> --save\n\n# install specific version of a package and add it to bower.json\n$ bower install <package>#<version> --save\n```\n\n### Using packages\n\nWe discourage using bower components statically for performance and security reasons (if component has an `upload.php` file that is not ignored, that can be easily exploited to do malicious stuff).\n\nThe best approach is to process components installed by bower with build tool (like [Grunt](http://gruntjs.com/) or [gulp](http://gulpjs.com/)), and serve them concatenated or using module loader (like [RequireJS](http://requirejs.org/)).\n\n### Uninstalling packages\n\nTo uninstall a locally installed package:\n\n```sh\n$ bower uninstall <package-name>\n```\n\n### prezto and oh-my-zsh users\n\nOn `prezto` or `oh-my-zsh`, do not forget to `alias bower=\'noglob bower\'` or `bower install jquery\\#1.9.1`\n\n### Running commands with sudo\n\nBower is a user command, there is no need to execute it with superuser permissions.\nHowever, if you still want to run commands with sudo, use `--allow-root` option.\n\n### Windows users\n\nTo use Bower on Windows, you must install\n[msysgit](http://msysgit.github.io/) correctly. Be sure to check the\noption shown below:\n\n![msysgit](http://f.cl.ly/items/2V2O3i1p3R2F1r2v0a12/mysgit.png)\n\nNote that if you use TortoiseGit and if Bower keeps asking for your SSH\npassword, you should add the following environment variable: `GIT_SSH -\nC:\\Program Files\\TortoiseGit\\bin\\TortoisePlink.exe`. Adjust the `TortoisePlink`\npath if needed.\n\n## Configuration\n\nBower can be configured using JSON in a `.bowerrc` file. Read over available options at [bower.io/docs/config](http://bower.io/docs/config).\n\n## Completion (experimental)\n\n_NOTE_: Completion is still not implemented for the 1.0.0 release\n\nBower now has an experimental `completion` command that is based on, and works\nsimilarly to the [npm completion](https://npmjs.org/doc/cli/completion.html). It is\nnot available for Windows users.\n\nThis command will output a Bash / ZSH script to put into your `~/.bashrc`,\n`~/.bash_profile`, or `~/.zshrc` file.\n\n```sh\n$ bower completion >> ~/.bash_profile\n```\n\n\n## Support\n\n* [StackOverflow](http://stackoverflow.com/questions/tagged/bower)\n* [Mailinglist](http://groups.google.com/group/twitter-bower) - twitter-bower@googlegroups.com\n* [\\#bower](http://webchat.freenode.net/?channels=bower) on Freenode\n\n\n## Contributing\n\nWe welcome contributions of all kinds from anyone. Please take a moment to\nreview the [guidelines for contributing](CONTRIBUTING.md).\n\n* [Bug reports](CONTRIBUTING.md#bugs)\n* [Feature requests](CONTRIBUTING.md#features)\n* [Pull requests](CONTRIBUTING.md#pull-requests)\n\n\nNote that on Windows for tests to pass you need to configure Git before cloning:\n\n```\ngit config --global core.autocrlf input\n```\n\n## Bower Team\n\nBower is made by lots of people across the globe, contributions large and small. Our thanks to everyone who has played a part.\n\n### Core team\n\n* [@satazor](https://github.com/satazor)\n* [@wibblymat](https://github.com/wibblymat)\n* [@paulirish](https://github.com/paulirish)\n* [@benschwarz](https://github.com/benschwarz)\n* [@svnlto](https://github.com/svnlto)\n* [@sheerun](https://github.com/sheerun)\n\n### Bower Alumni\n\n* [@fat](https://github.com/fat)\n* [@maccman](https://github.com/maccman)\n\n\n## License\n\nCopyright (c) 2015 Twitter and other contributors\n\nLicensed under the MIT License\n',
+593 silly resolved     readmeFilename: 'README.md',
+593 silly resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+593 silly resolved     _id: 'bower@1.4.1',
+593 silly resolved     dist: { shasum: 'c77c6bc15d218bc63749d99cce8ae150876e4f9b' },
+593 silly resolved     _from: 'bower@',
+593 silly resolved     _resolved: 'https://registry.npmjs.org/bower/-/bower-1.4.1.tgz' } ]
+594 info install grunt-cli@0.1.13 into /usr/local/lib
+595 info install yo@1.4.6 into /usr/local/lib
+596 info install bower@1.4.1 into /usr/local/lib
+597 info installOne grunt-cli@0.1.13
+598 info installOne yo@1.4.6
+599 warn engine yo@1.4.6: wanted: {"node":">=0.10.0","npm":">=2.1.0"} (current: {"node":"v0.10.25","npm":"1.3.10"})
+600 info installOne bower@1.4.1
+601 info /usr/local/lib/node_modules/grunt-cli unbuild
+602 info /usr/local/lib/node_modules/yo unbuild
+603 info /usr/local/lib/node_modules/bower unbuild
+604 verbose tar unpack /home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+605 silly lockFile 466968dc-local-lib-node-modules-grunt-cli tar:///usr/local/lib/node_modules/grunt-cli
+606 verbose lock tar:///usr/local/lib/node_modules/grunt-cli /home/vitareinforce/.npm/466968dc-local-lib-node-modules-grunt-cli.lock
+607 silly lockFile 4e978781-npm-grunt-cli-0-1-13-package-tgz tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz
+608 verbose lock tar:///home/vitareinforce/.npm/grunt-cli/0.1.13/package.tgz /home/vitareinforce/.npm/4e978781-npm-grunt-cli-0-1-13-package-tgz.lock
+609 verbose tar unpack /home/vitareinforce/.npm/yo/1.4.6/package.tgz
+610 silly lockFile 7d7c7bef-ar-usr-local-lib-node-modules-yo tar:///usr/local/lib/node_modules/yo
+611 verbose lock tar:///usr/local/lib/node_modules/yo /home/vitareinforce/.npm/7d7c7bef-ar-usr-local-lib-node-modules-yo.lock
+612 silly lockFile 172067e5-inforce-npm-yo-1-4-6-package-tgz tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz
+613 verbose lock tar:///home/vitareinforce/.npm/yo/1.4.6/package.tgz /home/vitareinforce/.npm/172067e5-inforce-npm-yo-1-4-6-package-tgz.lock
+614 verbose tar unpack /home/vitareinforce/.npm/bower/1.4.1/package.tgz
+615 silly lockFile 1396471b-usr-local-lib-node-modules-bower tar:///usr/local/lib/node_modules/bower
+616 verbose lock tar:///usr/local/lib/node_modules/bower /home/vitareinforce/.npm/1396471b-usr-local-lib-node-modules-bower.lock
+617 silly lockFile f9a158aa-orce-npm-bower-1-4-1-package-tgz tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz
+618 verbose lock tar:///home/vitareinforce/.npm/bower/1.4.1/package.tgz /home/vitareinforce/.npm/f9a158aa-orce-npm-bower-1-4-1-package-tgz.lock
+619 silly gunzTarPerm modes [ '755', '644' ]
+620 silly gunzTarPerm modes [ '755', '644' ]
+621 silly gunzTarPerm modes [ '755', '644' ]
+622 error Error: EACCES, mkdir '/usr/local/lib/node_modules'
+622 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules']
+622 error   errno: 3,
+622 error   code: 'EACCES',
+622 error   path: '/usr/local/lib/node_modules',
+622 error   fstream_type: 'Directory',
+622 error   fstream_path: '/usr/local/lib/node_modules/grunt-cli',
+622 error   fstream_class: 'DirWriter',
+622 error   fstream_stack:
+622 error    [ '/usr/lib/nodejs/fstream/lib/writer.js:171:23',
+622 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+622 error      'Object.oncomplete (fs.js:107:15)' ] }
+623 error Please try running this command again as root/Administrator.
+624 error System Linux 3.13.0-53-generic
+625 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "--global" "yo" "bower" "grunt-cli"
+626 error cwd /home/vitareinforce/Documents/www/drupal
+627 error node -v v0.10.25
+628 error npm -v 1.3.10
+629 error path /usr/local/lib/node_modules
+630 error fstream_path /usr/local/lib/node_modules/grunt-cli
+631 error fstream_type Directory
+632 error fstream_class DirWriter
+633 error code EACCES
+634 error errno 3
+635 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules'
+636 error fstream_stack /usr/lib/nodejs/fstream/lib/writer.js:171:23
+636 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+636 error fstream_stack Object.oncomplete (fs.js:107:15)
+637 verbose exit [ 3, true ]
