@@ -7,10 +7,9 @@
 	function restdebug_block_view($delta = '') {
 		$block['content'] = '<h1>Web Service Testing</h1>';
 		
-		//$createnoderesult = restdebug_block_create_node();
-		dpm(restdebug_block_get_node());
+		//dpm(restdebug_block_get_node());
 		dpm(restdebug_block_create_node());
-		dpm(restdebug_block_get_token());
+		//dpm(restdebug_block_get_token());
 		
 		/*	
 		$getnoderesult = restdebug_block_get_node();
@@ -26,14 +25,16 @@
 		
 		$header = array(
 			'headers' => array(
-				'Content-Type' => 'application/json',
+				'Content-type' => 'text/plain',
+				//'Authorization' => 'Basic qsdjhqsdjqsnbd:sjqdbqs='
+				//'Content-Type' => 'application/json',
 				'Cookie' => restdebug_login('admin','admin')
 			),
-			'method' => 'GET',
+			'method' => 'POST',
 		);
 		//$parameter = "?parameters[vid]=2";
 		//$url .= $parameter;
-		return drupal_http_request($url,$header);
+		return drupal_http_request($url,$header)->data;
 	}
 
 	function restdebug_block_get_node() {
