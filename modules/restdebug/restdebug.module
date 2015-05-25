@@ -26,10 +26,10 @@
 		
 		$header = array(
 			'headers' => array(
-				//'Content-Type' => 'application/json',
-				'Cookie' => ''.$_COOKIE['drupal_session_name'].'='.$_COOKIE['drupal_session_id'].''
+				'Content-Type' => 'application/json',
+				'Cookie' => restdebug_login('admin','admin')
 			),
-			'method' => 'POST',
+			'method' => 'GET',
 		);
 		//$parameter = "?parameters[vid]=2";
 		//$url .= $parameter;
@@ -65,8 +65,9 @@
 
 		$node_options = array(
 			'headers' => array(
-				'Content-Type' => 'application/json',
-				'Cookie' => restdebug_login('admin','admin')
+				'Content-type' => 'application/json',
+				'Cookie' => restdebug_login('admin','admin'),
+				'X-CSRF-Token' => restdebug_block_get_token()
 			),
 			'method' => 'POST',
 			'data' => $node_data
@@ -98,7 +99,6 @@
 			$user_options = array(
 				'headers' => array('Content-type' => 'application/json'),
 				'method' => 'POST',
-				'X-CSRF-Token' => restdebug_block_get_token(),
 				'data' => $user_data
 			);
 		}
