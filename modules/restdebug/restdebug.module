@@ -8,7 +8,7 @@
 		$block['content'] = '<h1>Web Service Testing</h1>';
 		
 		//dpm(restdebug_block_get_node());
-		dpm(restdebug_block_create_node());
+		//dpm(restdebug_block_create_node());
 		//dpm(restdebug_block_get_token());
 		
 		/*	
