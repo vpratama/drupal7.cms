@@ -8,7 +8,7 @@
 		$block['content'] = '<h1>Web Service Testing</h1>';
 		
 		//dpm(restdebug_block_get_node());
-		dpm(restdebug_block_create_node());
+		//dpm(restdebug_block_create_node());
 		//dpm(restdebug_block_get_token());
 		
 		/*	
@@ -21,13 +21,11 @@
 	}
 
 	function restdebug_block_get_token() {
-		$url = "http://drupal7.cms/restws/session/token";
+		$url = "http://drupal7.cms/services/session/token";
 		
 		$header = array(
 			'headers' => array(
 				'Content-type' => 'text/plain',
-				//'Authorization' => 'Basic qsdjhqsdjqsnbd:sjqdbqs='
-				//'Content-Type' => 'application/json',
 				'Cookie' => restdebug_login('admin','admin')
 			),
 			'method' => 'POST',
