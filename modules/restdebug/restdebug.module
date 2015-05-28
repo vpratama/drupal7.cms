@@ -26,7 +26,7 @@
 		$header = array(
 			'headers' => array(
 				'Content-type' => 'text/plain',
-				'Cookie' => restdebug_login('admin','admin')
+				//'Cookie' => restdebug_login('admin','admin')
 			),
 			'method' => 'POST',
 		);
@@ -76,16 +76,6 @@
 	}
 
 	function restdebug_login($username, $password) {
-		/*
-		$curl_get = curl_init();
-		curl_setopt_array($curl_get, array(
-		    CURLOPT_RETURNTRANSFER => 1,
-		    CURLOPT_URL => 'http://drupal7.cms/service/user/token',
-		));
-		$csrf_token = curl_exec($curl_get);
-		curl_close($curl_get);
-		*/
-
 		if(isset($_COOKIE['drupal_session_name']) && isset($_COOKIE['drupal_session_id'])) {
 			return ''.$_COOKIE['drupal_session_name'].'='.$_COOKIE['drupal_session_id'].'';
 		} else {

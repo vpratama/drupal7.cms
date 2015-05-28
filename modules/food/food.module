@@ -25,7 +25,7 @@
 
 		  // Load the app
 		  drupal_add_js($path . '/js/controller.js');
-
+		  drupal_add_js($path . '/js/getData.js');
 		  drupal_add_css($path . '/css/bootstrap.min.css');
 
 		  // Return the HTML template
