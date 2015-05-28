@@ -24,6 +24,8 @@
         <div>
           Price : {{nodes.node.Price}}
         </div>
+        <a>Update Post</a>
+        <a ng-click="delete(nodes.node.Nid )">Delete Post</a>
         <br />
     </div>
     

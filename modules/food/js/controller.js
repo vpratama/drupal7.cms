@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', 
-  function($scope, $http) {
+  function($scope, $http, tokenAPI) {
   	$scope.hidden = function() {
         $scope.hideShow = !$scope.hideShow;
     }
@@ -59,6 +59,82 @@ app.controller('customersCtrl',
         });
      });     
     }
-    
+
+
+    $scope.update = function(node) {
+      tokenAPI.then(function(tokens){
+        console.log(tokens.data);
+         $http({
+          url: "service/system/connect",
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+            "X-CSRF-Token": tokens.data.token
+          }
+        })
+        .success(function (user) { 
+          console.log(user.session_name+'='+user.sessid);
+          
+          $http({
+            url: "service/node/"+node,
+            method: "POST",
+            headers: {
+              'Content-type': 'application/json',
+              'xhrFields': {
+                'withCredentials': 'true'
+              },
+              'Cookie': user.session_name+'='+user.sessid,
+              'X-CSRF-Token' : tokens.data.token
+            },
+            data: $scope.article
+          })
+          .success(function (data) {
+            console.log(data);
+            $scope.hideShow = true;
+            //$location.absUrl(data.uri);
+          });
+          
+        }).error(function (error) { 
+          console.log(error);
+        });
+     });     
+    }
+
+
+    $scope.delete = function(node) {
+      tokenAPI.then(function(tokens){
+        console.log(tokens.data);
+         $http({
+          url: "service/system/connect",
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+            "X-CSRF-Token": tokens.data.token
+          }
+        })
+        .success(function (user) { 
+          console.log(user.session_name+'='+user.sessid);
+          $http({
+            url: "service/node/"+node,
+            method: "DELETE",
+            headers: {
+              'Content-type': 'application/json',
+              'xhrFields': {
+                'withCredentials': 'true'
+              },
+              'Cookie': user.session_name+'='+user.sessid,
+              'X-CSRF-Token' : tokens.data.token
+            },
+          })
+          .success(function (data) {
+            console.log(data);
+          });
+          
+        }).error(function (error) { 
+          console.log(error);
+        });
+     });     
+    }
+
   }
 );
