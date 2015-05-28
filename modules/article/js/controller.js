@@ -1,19 +1,15 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', 
-  function($scope, $http, tokenAPI) {
+  function($scope, $http, tokenAPI, getData) {
     
     $scope.hidden = function() {
         $scope.hideShow = !$scope.hideShow;
     }
-
-    $http.get("json/article")
-    .success(function (response) {$scope.result = response.nodes;});
-
-    /*
+    
     getData.then(function(jsonData){
-      console.log(jsonData.data);
+      $scope.result =jsonData.data.nodes;
     });
-    */ 
+    
     
     $scope.submit = function() {
       tokenAPI.then(function(tokens){
