@@ -20,8 +20,9 @@
 		    <br>
 		    <p align="justify">{{ nodes.node.Body }}</p>
 			<br />
+			<a>Update Post</a>
+			<a ng-click="delete(nodes.node.Nid )">Delete Post</a>
 			<br />
-		  </div>
-		  	
+		</div>
 	</div>
 </div>

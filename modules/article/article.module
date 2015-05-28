@@ -26,6 +26,7 @@
 		  // Load the app
 		  drupal_add_js($path . '/js/app.js');
 		  drupal_add_js($path . '/js/controller.js');
+		  drupal_add_js($path . '/js/getData.js');
 		  drupal_add_js($path . '/js/token.js');
 		  //drupal_add_js($path . '/js/jquery.cookie.js');
 
