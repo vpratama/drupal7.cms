@@ -1,7 +1,7 @@
 <div id="content" role="main">
 	<div ng-app="myApp" ng-init="article.type='article'" ng-controller="customersCtrl"> 
 		<div class="input-append">
-          Filter : <input type="text" ng-model="search" autocomplete="false" style="width: 300px">
+          Filter : <input type="text" ng-model="search.node.title" autocomplete="false" style="width: 300px">
         </div>
 		<a ng-click="hidden()">Post new Article</a>
 		<div ng-init="hideShow = true" ng-hide="hideShow">
@@ -20,9 +20,34 @@
 		    <br>
 		    <p align="justify">{{ nodes.node.Body }}</p>
 			<br />
-			<a>Update Post</a>
-			<a ng-click="delete(nodes.node.Nid )">Delete Post</a>
+			<a data-toggle="modal" href="#myModal" ng-click="updatedData(nodes.node.Nid)">Update Post</a>
+			<a ng-click="delete(nodes.node.Nid)">Delete Post</a>
 			<br />
 		</div>
+		<!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		      	<form ng-submit="update(datas.nid)" ng-init="updatesData.body.und[0].format='filtered_html'">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Update Data</h4>
+		        </div>
+		        <div class="modal-body" ng-init="updatesData.type='article'">
+		        		ID = <input type="text" value="{{ datas.nid }}" /><br />
+			        	Title <input type="text" value="{{ datas.title }}" /><br /><br />
+			        	Content <textarea cols="50" rows"250">{{ datas.body.und[0].value }}</textarea><br /><br />
+			    </div>
+			    <p>{{ updatesData }}</p>
+		        <div class="modal-footer">
+		          <input type="submit" />
+		        </div>
+		        </form>
+		      </div>
+		      
+		    </div>
+		  </div>
 	</div>
 </div>

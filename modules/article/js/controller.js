@@ -2,6 +2,8 @@ var app = angular.module('myApp', []);
 app.controller('customersCtrl', 
   function($scope, $http, tokenAPI, getData) {
     
+    $scope.debug = "0";
+
     $scope.hidden = function() {
         $scope.hideShow = !$scope.hideShow;
     }
@@ -10,7 +12,18 @@ app.controller('customersCtrl',
       $scope.result =jsonData.data.nodes;
     });
     
-    
+
+    $scope.updatedData = function(node) {
+      $http.get("service/node/"+node)
+      .success(function(updatedData) {
+        console.log(updatedData);
+        $scope.datas = updatedData;
+
+      }).error(function(error) {
+        console.log(error);
+      });
+    }
+
     $scope.submit = function() {
       tokenAPI.then(function(tokens){
         console.log(tokens.data);
@@ -80,7 +93,7 @@ app.controller('customersCtrl',
           
           $http({
             url: "service/node/"+node,
-            method: "POST",
+            method: "PUT",
             headers: {
               'Content-type': 'application/json',
               'xhrFields': {
@@ -89,12 +102,10 @@ app.controller('customersCtrl',
               'Cookie': user.session_name+'='+user.sessid,
               'X-CSRF-Token' : tokens.data.token
             },
-            data: $scope.article
+            data: $scope.updatesData
           })
           .success(function (data) {
             console.log(data);
-            $scope.hideShow = true;
-            //$location.absUrl(data.uri);
           });
           
         }).error(function (error) { 

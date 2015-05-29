@@ -8,7 +8,8 @@
 
     <meta charset="utf-8" />
 
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <!-- Always force latest IE ren
+    dering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
     <?php print $head; ?>
