@@ -2,8 +2,6 @@ var app = angular.module('myApp', []);
 app.controller('customersCtrl', 
   function($scope, $http, tokenAPI, getData) {
     
-    $scope.debug = "0";
-
     $scope.hidden = function() {
         $scope.hideShow = !$scope.hideShow;
     }
@@ -18,7 +16,6 @@ app.controller('customersCtrl',
       .success(function(updatedData) {
         console.log(updatedData);
         $scope.datas = updatedData;
-
       }).error(function(error) {
         console.log(error);
       });
@@ -102,7 +99,18 @@ app.controller('customersCtrl',
               'Cookie': user.session_name+'='+user.sessid,
               'X-CSRF-Token' : tokens.data.token
             },
-            data: $scope.updatesData
+            data: {
+              "type" : $scope.datas.type,
+              "title" : $scope.datas.title,
+              "body" : {
+                "und": { 
+                        "0": {  
+                            "value": $scope.datas.body.und[0].value,
+                            "format": $scope.datas.body.und[0].format
+                        }
+                    }
+                }
+            }
           })
           .success(function (data) {
             console.log(data);

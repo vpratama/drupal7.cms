@@ -30,18 +30,17 @@
 		    
 		      <!-- Modal content-->
 		      <div class="modal-content">
-		      	<form ng-submit="update(datas.nid)" ng-init="updatesData.body.und[0].format='filtered_html'">
+		      	<form ng-submit="update(datas.nid)">
 		        <div class="modal-header">
 		          <button type="button" class="close" data-dismiss="modal">&times;</button>
 		          <h4 class="modal-title">Update Data</h4>
 		        </div>
-		        <div class="modal-body" ng-init="updatesData.type='article'">
-		        		ID = <input type="text" value="{{ datas.nid }}" /><br />
-			        	Title <input type="text" value="{{ datas.title }}" /><br /><br />
-			        	Content <textarea cols="50" rows"250">{{ datas.body.und[0].value }}</textarea><br /><br />
+		        <div class="modal-body">
+		        		ID = <input type="text" ng-model="datas.nid" readonly /><br />
+			        	Title <input type="text" ng-model="datas.title" /><br /><br />
+			        	Content <textarea cols="50" ng-model="datas.body.und[0].value" rows"250"></textarea><br /><br />
 			    </div>
-			    <p>{{ updatesData }}</p>
-		        <div class="modal-footer">
+			    <div class="modal-footer">
 		          <input type="submit" />
 		        </div>
 		        </form>
