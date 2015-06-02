@@ -145,10 +145,12 @@ function zen_bootstrap_theme() {
 return $items;
 }
 
+/*
 function zen_bootstrap_preprocess_page(&$variables){
   $search_box = drupal_render(drupal_get_form('search_form'));
   $variables['search_box'] = $search_box;
 }
+*/
 
 function zen_bootstrap_status_messages($variables) {
   $display = $variables['display'];

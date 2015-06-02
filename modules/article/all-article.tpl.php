@@ -20,12 +20,12 @@
 		    <br>
 		    <p align="justify">{{ nodes.node.Body }}</p>
 			<br />
-			<a data-toggle="modal" href="#myModal" ng-click="updatedData(nodes.node.Nid)">Update Post</a>
+			<a data-toggle="modal" href="#myModal2" ng-click="updatedData(nodes.node.Nid)">Update Post</a>
 			<a ng-click="delete(nodes.node.Nid)">Delete Post</a>
 			<br />
 		</div>
 		<!-- Modal -->
-		  <div class="modal fade" id="myModal" role="dialog">
+		  <div class="modal fade" id="myModal2" role="dialog">
 		    <div class="modal-dialog">
 		    
 		      <!-- Modal content-->
