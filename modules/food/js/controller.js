@@ -34,8 +34,9 @@ app.controller('customersCtrl',
           console.log(user.session_name+'='+user.sessid);
           
           var fd = new FormData();
-          //Take the first selected file
-          fd.append("file", $scope.food.field_image.und[0].uri);
+          fd.append("file", $scope.files);
+
+          console.log($scope.files);
 
           $http({
             url: "service/node/",
@@ -48,21 +49,30 @@ app.controller('customersCtrl',
               'Cookie': user.session_name+'='+user.sessid,
               'X-CSRF-Token' : tokens.data.token
             },
-            data: $scope.food
-            /*
+            //data: $scope.food,
+            transformRequest: angular.identity,
+            
             data: {
-              "type" : "article",
-              "title" : "testing sukses gan tapi ada security errornya ahahahaha",
-              "body" : {
-                "und": { 
-                        "0": {  
-                            "value":"loren ipsum dolor sit amet",
-                            "format": "filtered_html"
-                        }
-                    }
-                }
+              "type" : $scope.food.type,
+              "title" : $scope.food.title,  
+              "field_image":{  
+                  "und":{ 
+                        "0": {
+                          //"filename":"dessert.jpg",
+                          "uri": $scope.files,
+                          "filemime":"image/jpeg"
+                      }
+                  }
+              },
+              "field_price":{  
+                  "und": {  
+                      "0": {  
+                          "value": $scope.food.field_price.und[0].value
+                      }
+                  }
+              }  
             }
-            */
+            
           })
           .success(function (data) {
             console.log(data);

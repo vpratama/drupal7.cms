@@ -7,7 +7,7 @@
     <div ng-init="hideShow = true" ng-hide="hideShow">
       <form ng-submit="submit()" ng-init="food.body.und[0].format='filtered_html'">
         Name&nbsp;&nbsp;&nbsp;<input ng-model="food.title" type="text" /><br /><br />
-        Photo&nbsp;&nbsp;&nbsp;<input type="file" file-upload multiple /><br /><br />
+        Photo&nbsp;&nbsp;&nbsp;<input type="file" name="file" file-upload multiple /><br /><br />
         Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input ng-model="food.field_price.und[0].value" type="text" /><br /><br />
         <input type="submit" />
         <p>{{files.name}}</p>
