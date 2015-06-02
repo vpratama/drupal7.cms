@@ -35,7 +35,7 @@ app.controller('customersCtrl',
           
           var fd = new FormData();
           //Take the first selected file
-          fd.append("file", JSON.stringify($scope.food.field_image.und[0].uri));
+          fd.append("file", $scope.food.field_image.und[0].uri);
 
           $http({
             url: "service/node/",
