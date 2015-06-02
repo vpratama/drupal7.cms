@@ -66,7 +66,7 @@ app.controller('customersCtrl',
             console.log(data);
             $scope.hideShow = true;
             //$location.absUrl(data.uri);
-          });up
+          });
           
         }).error(function (error) { 
           console.log(error);
