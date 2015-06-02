@@ -33,6 +33,10 @@ app.controller('customersCtrl',
         .success(function (user) { 
           console.log(user.session_name+'='+user.sessid);
           
+          var fd = new FormData();
+          //Take the first selected file
+          fd.append("file", $scope.food.field_image.und[0].uri);
+
           $http({
             url: "service/node/",
             method: "POST",
@@ -44,7 +48,7 @@ app.controller('customersCtrl',
               'Cookie': user.session_name+'='+user.sessid,
               'X-CSRF-Token' : tokens.data.token
             },
-            data: $scope.article
+            data: $scope.food
             /*
             data: {
               "type" : "article",

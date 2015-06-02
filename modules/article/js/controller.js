@@ -34,7 +34,7 @@ app.controller('customersCtrl',
         })
         .success(function (user) { 
           console.log(user.session_name+'='+user.sessid);
-          
+
           $http({
             url: "service/node/",
             method: "POST",
@@ -46,7 +46,7 @@ app.controller('customersCtrl',
               'Cookie': user.session_name+'='+user.sessid,
               'X-CSRF-Token' : tokens.data.token
             },
-            data: $scope.article
+            data: $scope.article,
             /*
             data: {
               "type" : "article",

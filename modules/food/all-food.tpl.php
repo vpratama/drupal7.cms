@@ -5,11 +5,12 @@
     </div>
     <a ng-click="hidden()">Add new Post</a>
     <div ng-init="hideShow = true" ng-hide="hideShow">
-      <form>
+      <form ng-submit="submit()" ng-init="food.body.und[0].format='filtered_html'">
         Name&nbsp;&nbsp;&nbsp;<input ng-model="food.title" type="text" /><br /><br />
-        Photo&nbsp;&nbsp;&nbsp;<input ng-model="food.field_image.und[0].uri" type="file" /><br /><br />
+        Photo&nbsp;&nbsp;&nbsp;<input type="file" file-upload multiple /><br /><br />
         Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input ng-model="food.field_price.und[0].value" type="text" /><br /><br />
         <input type="submit" />
+        <p>{{files.name}}</p>
         <p>form data = {{ food }}</p>
       </form>
     </div>  
